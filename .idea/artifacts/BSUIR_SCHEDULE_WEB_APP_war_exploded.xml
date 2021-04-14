@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="BSUIR_SCHEDULE_WEB_APP:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/BSUIR_SCHEDULE_WEB_APP_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="BSUIR_SCHEDULE_WEB_APP/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="BSUIR_SCHEDULE_WEB_APP" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -2,7 +2,7 @@ package Schedule;
 
 import java.util.HashSet;
 
-class BSUIRLesson {
+public class BSUIRLesson {
     private final String subjectName;
     private final String time;
     private final String teacher;
@@ -34,4 +34,23 @@ class BSUIRLesson {
         return subjectName + "(" + type + ") " + time + "\n"+ "(" + auditory + ")\n" + teacher;
     }
 
+    public String getSubjectName() {
+        return subjectName;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public String getTeacher() {
+        return teacher;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getAuditory() {
+        return auditory;
+    }
 }

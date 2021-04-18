@@ -1,0 +1,432 @@
+
+/*//////////////PAGE/////////////////*/
+
+
+
+#logo{
+	float: left;
+	width: 100px;
+	z-index: 2 ;
+	position: fixed;
+}
+body {
+	background: url(Images/background.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover; 
+	overflow: auto;
+	margin: 0;
+}
+
+#page {
+	overflow: auto; /*При анимации не расширяется окно и не появляется горизонтальный скролл*/
+	width: 100%;
+}
+
+.text {
+	font-size: 18px;
+}
+
+.title{
+	font-size: 40px;
+}
+
+.mainimg {
+	display: inline-block;
+	border-radius: 5px;
+
+}
+
+.inf-main-parent {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	margin-bottom: 50px;
+
+}
+
+.inf-main {
+	display: inline-block;
+
+}
+
+#inf-main1 { 
+	position: absolute;
+	left: 50px;
+}
+
+#inf-main2 {
+	position: absolute;
+	top: 37px;
+	right: 50px;
+	color:white;
+	background: rgba(0,0,0,0.5);
+	font-family: "Veranda", sans-serif;
+	font-size: 17px;
+	padding: 10px 45px 20px 45px;
+	border-radius: 5px;
+}
+
+.a-main{
+	text-decoration: none;
+	color:white;
+	font-family: "Veranda", sans-serif ;
+	display: block;
+	font-weight: bold;
+}
+
+.a-main:hover {
+	color: yellow;
+	transition: 0.2s;
+}
+
+.a-main-blog {
+	text-decoration: none;
+	color:white;
+	font-family: "Veranda", sans-serif ;
+	font-size: 16px;
+	display: inline-block;
+	line-height: 1.8;
+	padding-left: 7px;
+	padding-right: 7px;
+	transition: 0.4s;
+	font-weight: 700;/*толщина шрифта*/
+	background-color: #1c1c1c;
+	border-radius: 5px;
+
+}
+
+.a-main-blog:hover {
+	background-color: yellow;
+	transition: 0.2s;
+	color: black;
+}
+
+.a-main-p {
+	text-decoration: none;
+	color: yellow;
+}
+
+.a-main-p:hover {
+	transition: 0.2s;
+	color: grey;
+}
+
+/*//////////////////FOOTER///////////////*/
+
+.footer {
+	background: rgba(0,0,0,0.5);
+	height: 300px;
+	width: 100%;
+	bottom: 0;
+	padding-top: 15px;
+	margin-top: 170px;
+}
+
+.footer-logo {
+	margin-left: 20px;
+	font-family: "Veranda", sans-serif ;
+	font-size: 20px;
+	color: grey;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+
+.footer-block {
+	display: inline-block;
+	margin-right: 20px;
+	margin-left: 20px;
+	vertical-align: top;
+	
+}
+
+.footer-block h3 {
+	color: grey;
+	font-weight: 100;
+	text-transform: uppercase;
+}
+
+.footer-ul {
+	list-style-type: none;
+	font-family: "Veranda", sans-serif ;
+	font-size: 15px;
+	padding: 0;
+	color: grey;
+	line-height: 2;
+	font-weight: 100;
+
+}
+
+.a-footer {
+	text-decoration: none;
+	font-family: "Veranda", sans-serif ;
+	display: block;
+	color: grey;
+}
+
+.a-footer:hover {
+	color: yellow;
+	transition: 0.2s;
+}
+
+.author {
+	float: right;
+	margin-right: 10px;
+}
+
+.author h3 {
+	color: grey;
+	font-weight: 100;
+	text-transform: uppercase;
+}
+/*///////////MENU/////////////*/
+
+#menu {
+	background-color: #1c1c1c;
+	width: 100%;
+	height: 50px;
+	top: 0;
+	position: fixed; 
+	margin: 0;  
+	z-index: 1;
+	min-width: 1000px;
+	text-align: center;
+}
+
+#navbar{
+	list-style-type: none;
+	margin-top: 0;	
+
+}
+
+#menu ul li  {
+	display: inline-block;
+	margin-left: -4px;
+}
+
+#menu ul {
+	padding-inline-start: 0;
+
+}
+
+#navbar a {
+	text-decoration: none;
+	color:white;
+	font-family: "Veranda", sans-serif ;
+	font-size: 16px;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 20px;
+	transition : 0.4s;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+#navbar a:hover {
+	background-color: yellow;
+	transition: 0.2s;
+	color: black;
+}
+
+
+#active {
+ border-bottom: 2px solid yellow;
+}
+
+#logo-inst-vk{
+	width: 30px;
+	vertical-align: middle;
+	margin-top: -5px;
+}
+
+/*/////////////CONTENT/////////////*/
+
+ h1, h2, h3, h4, h5, h6, p {
+ 	color:white;
+	font-family: "Veranda", sans-serif;
+}
+
+p {
+	line-height: 1.5;
+}
+
+#content {
+	display: block;
+	width: 500px;
+	min-width: 450px;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+   }
+
+#content1 {
+	display: block;
+	width: 100%;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+}
+
+#content2 {
+	color:white;
+	background: rgba(0,0,0,0.5);
+	font-family: "Veranda", sans-serif;
+	font-size: 17px;
+	padding: 15px 25px 25px 25px;
+	margin-bottom: 20px;
+	border-radius: 20px;
+}
+
+.data {
+	color:#616060;
+	font-family: "Veranda", sans-serif;
+	font-size: 15px;
+	text-align: right;
+	margin-top: 10px;
+}
+
+/*/////////////////////TEAM/////////////////////*/
+
+.inf{
+	vertical-align: inherit;
+}
+
+tr {
+	vertical-align: top;
+}
+
+.inf h3 {
+	margin-top: 0;
+	margin-left: 10px;
+	font-family: "Veranda", sans-serif;
+}
+
+.inf h3 a {
+	text-decoration: none;
+	color:white;
+	font-family: "Veranda", sans-serif ;
+	display: block;
+
+}
+.inf h3 a:hover {
+	color: yellow;
+	transition: 0.2s;
+}
+
+.teamphoto {
+	margin-bottom: 50px;
+	width: 100%;
+}
+
+
+
+/*///////////////////SHOPS///////////////////////*/
+
+#content3 {
+	color:white;
+	background: rgba(0,0,0,0.5);
+	font-family: "Veranda", sans-serif;
+	font-size: 17px;
+	padding: 10px 20px 20px 20px;
+	margin-bottom: 20px;
+	width: 400px;
+	display: inline-block;
+	margin-right: 25px;
+	min-width: 250px;
+	height: 300px;
+	border-radius: 5px;
+
+}
+
+.a-shop {
+	text-decoration: none;
+	color:white;
+	font-family: "Veranda", sans-serif ;
+	font-size: 16px;
+	display: block;
+	height: 50px;
+	line-height: 25px;
+	width: 220px;
+	padding-left: 20px;
+	padding-right: 20px;
+	transition: 0.4s;
+	font-weight: 700;/*толщина шрифта*/
+	background-color: #454545;
+	border-radius: 10px;
+}
+
+.page_button {
+	text-decoration: none;
+	color:white;
+	font-family: "Veranda", sans-serif ;
+	font-size: 16px;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 20px;
+	transition : 0.4s;
+	font-weight: 700;
+	text-transform: uppercase;
+	background-color: rgba(255,255,255,0);
+}
+
+.page_button:hover {
+	background-color: yellow;
+	transition: 0.2s;
+	color: black;
+}
+
+
+.inputEdit {
+	text-decoration: none;
+	color:white;
+	font-family: "Veranda", sans-serif ;
+	font-size: 16px;
+	display: block;
+	height: 50px;
+	line-height: 25px;
+	width: 200px;
+	padding-left: 20px;
+	padding-right: 20px;
+	transition: 0.4s;
+	font-weight: 700;/*толщина шрифта*/
+	background-color: #454545;
+	border-radius: 10px;
+	outline: none; border: none;
+}
+
+.a-shop:hover {
+	background-color: yellow;
+	transition: 0.2s;
+	color: black;
+}
+
+.shop-img {
+	border-radius: 5px;
+}
+/*/////////////////SAFETY///////////////////*/
+
+.safety-img {
+	float: left;
+	width: 220px;
+	margin-right: 20px;
+}
+
+.safety-inf{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.safety-img-content {
+	float: left;
+	width: 250px;
+	margin-right: 20px;
+}
+
+.safety-img-content1 {
+	float: left;
+	width: 150px;
+	margin-right: 20px;
+} 
+

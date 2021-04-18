@@ -13,6 +13,10 @@ public class BSUIRSchedule {
     private final ArrayList<ArrayList<BSUIRLesson>> scheduleList;
     private final int currentWeek;
 
+    public int getCurrentWeek() {
+        return currentWeek;
+    }
+
     public BSUIRSchedule(String groupNumber) {
         JSONRequester requester = new JSONRequester();
         String jsonData = requester.getGroupSchedule(groupNumber);
@@ -20,6 +24,10 @@ public class BSUIRSchedule {
         JSONObject jsonObject = new JSONObject(jsonData);
         JSONParser parser = new JSONParser();
         scheduleList = parser.parseToList(jsonObject);
+    }
+
+    public ArrayList<ArrayList<BSUIRLesson>> getScheduleList() {
+        return scheduleList;
     }
 
     @Override

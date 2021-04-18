@@ -3,7 +3,10 @@
   <component name="WebContextManager">
     <option name="state">
       <map>
+        <entry key="file://$PROJECT_DIR$/web/Pages/groupSchedule.jsp" value="file://$PROJECT_DIR$/web/Pages" />
+        <entry key="file://$PROJECT_DIR$/web/Pages/index.html" value="file://$PROJECT_DIR$/web/Pages" />
         <entry key="file://$PROJECT_DIR$/web/WEB-INF/index.html" value="file://$PROJECT_DIR$/web/WEB-INF" />
+        <entry key="file://$PROJECT_DIR$/web/errorJSON.jsp" value="file://$PROJECT_DIR$/web" />
       </map>
     </option>
   </component>

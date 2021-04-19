@@ -12,9 +12,14 @@ public class BSUIRSchedule {
     private static final int MAX_WEEK_NUMBER = 1;
     private final ArrayList<ArrayList<BSUIRLesson>> scheduleList;
     private final int currentWeek;
+    private final String groupNumber;
 
     public int getCurrentWeek() {
         return currentWeek;
+    }
+
+    public String getGroupNumber() {
+        return groupNumber;
     }
 
     public BSUIRSchedule(String groupNumber) {
@@ -24,6 +29,7 @@ public class BSUIRSchedule {
         JSONObject jsonObject = new JSONObject(jsonData);
         JSONParser parser = new JSONParser();
         scheduleList = parser.parseToList(jsonObject);
+        this.groupNumber = groupNumber;
     }
 
     public ArrayList<ArrayList<BSUIRLesson>> getScheduleList() {

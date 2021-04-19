@@ -49,6 +49,10 @@ class JSONParser {
         return weekDays;
     }
 
+    public String getTodayDate(JSONObject jsonObject) {
+        return jsonObject.getString("todayDate");
+    }
+
     private String getSubjectName(JSONObject jsonObject, int currDay, int currPair) {
         return  jsonObject.
                 getJSONArray(SCHEDULES).

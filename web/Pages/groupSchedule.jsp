@@ -1,9 +1,9 @@
 <%@ page import="Schedule.BSUIRSchedule" %>
-<%@ page import="java.util.ArrayList" %>
 <%@ page import="Schedule.BSUIRLesson" %>
 <%@ page import="Controller.Tools.HTMLConverter" %>
-<%@ page import="java.util.HashSet" %>
-<%@ page import="java.util.LinkedList" %><%--
+<%@ page import="Controller.Tools.HTMLWriter" %>
+<%@ page import="java.util.*" %>
+<%--
   Created by IntelliJ IDEA.
   User: IvanT
   Date: 15.04.2021
@@ -27,7 +27,7 @@
         <ul id="navbar">
             <li>
                 <form action="BSUIRSchedule" method="GET" >
-                    <input id="active" class="page_button" style="width: auto; outline: none; border: none;" type="submit" value="Расписание группы"/>
+                    <input id="active" class="page_button" style="width: auto; outline: none;" type="submit" value="Расписание группы"/>
                 </form>
             </li>
             <li><a href="safety.html">Расписание преподавателей</a></li>
@@ -41,29 +41,9 @@
         <h1 align="center" >РАСПИСАНИЕ ГРУППЫ</h1>
         <div id="content1">
         <%
-            BSUIRSchedule schedule = new BSUIRSchedule( request.getParameter("groupNumber"));
-            ArrayList<ArrayList<BSUIRLesson>> list = schedule.getScheduleList();
-            int currentWeek = schedule.getCurrentWeek();
-            HashSet<Integer> usedWeeks = new HashSet<>();
-            do {
-                usedWeeks.add(currentWeek);
-                out.println("<br><h2>" + currentWeek + "</h2>");
-                for (int i = 0; i < list.size(); i++) {
-                    out.println("<br><h2>" + list.get(i).get(0).getWeekDay() + "</h2>");
-
-                    for (int j = 0; j < list.get(i).size(); j++) {
-                        BSUIRLesson currLesson = list.get(i).get(j);
-                        if (currLesson.getWeeks().contains(currentWeek)){
-                            out.println("<div id=\"content2\">\n" + "<h1>" + currLesson.getSubjectName() + "  (" +
-                                    currLesson.getType()  + ")    "  + currLesson.getTime() + "</h1>" +
-                                    " <p class=\"text\">Аудитория: " + currLesson.getAuditory() + "</p>" +
-                                    " <p class=\"text\">Преподаватель: " + currLesson.getTeacher() + "</p>" + "</div>");
-                        }
-                    }
-                }
-                currentWeek++;
-                currentWeek = currentWeek > 4 ? 1 : currentWeek ;
-            }while (!usedWeeks.contains(currentWeek));
+            HTMLWriter writer = new HTMLWriter(new BSUIRSchedule(request.getParameter("groupNumber")));
+            out.println(writer.getScheduleInfo());
+            out.println(writer.getHTMLSchedule());
         %>
         </div>
     </div>

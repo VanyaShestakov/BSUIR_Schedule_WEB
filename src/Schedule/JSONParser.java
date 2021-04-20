@@ -19,12 +19,13 @@ class JSONParser {
     private static final String LESSON_TYPE = "lessonType";
     private static final String AUDITORY = "auditory";
     private static final String WEEK_NUMBER = "weekNumber";
+    private final JSONObject jsonObject;
 
-    public JSONParser() {
-
+    public JSONParser(JSONObject jsonObject) {
+        this.jsonObject = jsonObject;
     }
 
-    public ArrayList<ArrayList<BSUIRLesson>> parseToList(JSONObject jsonObject) {
+    public ArrayList<ArrayList<BSUIRLesson>> parseToList() {
         ArrayList<ArrayList<BSUIRLesson>> weekDays = new ArrayList<>();
         for (int currDay = 0; currDay < jsonObject.getJSONArray(SCHEDULES).length(); currDay++) {
             int pairsAmount = jsonObject.getJSONArray(SCHEDULES).
@@ -49,7 +50,7 @@ class JSONParser {
         return weekDays;
     }
 
-    public String getTodayDate(JSONObject jsonObject) {
+    public String getTodayDate() {
         return jsonObject.getString("todayDate");
     }
 

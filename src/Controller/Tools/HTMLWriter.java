@@ -52,7 +52,8 @@ public class HTMLWriter {
                         sb.append("<div style=\"border:" + borderStyle + "\" id=\"content2\">\n" + "<h1>" + currLesson.getSubjectName() + "  (" +
                                 currLesson.getType()  + ")    "  + currLesson.getTime() + "</h1>" +
                                 " <p class=\"text\">Аудитория: " + currLesson.getAuditory() + "</p>" +
-                                " <p class=\"text\">Преподаватель: " + currLesson.getTeacher() + "</p>" + "</div>");
+                                " <p class=\"text\">Преподаватель: " + currLesson.getTeacher() + "</p>" +
+                                "<img style=\"border-radius: 100%;\" src=\"" + currLesson.getTeacherPhoto() + "\" width=\"100px\" >"  + "</div>");
                     }
                 }
             }

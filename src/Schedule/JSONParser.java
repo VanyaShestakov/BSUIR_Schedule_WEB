@@ -41,8 +41,8 @@ class JSONParser {
                 String weekDay = getWeekday(jsonObject, currDay, currPair);
                 String auditory = getAuditory(jsonObject, currDay, currPair);
                 HashSet<Integer> weeks = getWeeks(jsonObject, currDay, currPair);
-                System.out.println(subjectName);
-                BSUIRLesson currLesson = new BSUIRLesson(subjectName, time, teacher, type, weekDay, weeks, auditory);
+                String teacherPhoto = getTeacherPhoto(jsonObject, currDay, currPair);
+                BSUIRLesson currLesson = new BSUIRLesson(subjectName, time, teacher, type, weekDay, weeks, auditory, teacherPhoto);
                 currPairs.add(currLesson);
             }
             weekDays.add(currPairs);
@@ -82,6 +82,21 @@ class JSONParser {
                     getJSONArray(EMPLOYEE).
                     getJSONObject(0).
                     getString(FIO);
+        } catch (JSONException e) {
+            return  "-";
+        }
+    }
+
+    private String getTeacherPhoto(JSONObject jsonObject, int currDay, int currPair) {
+        try {
+            return  jsonObject.
+                    getJSONArray(SCHEDULES).
+                    getJSONObject(currDay).
+                    getJSONArray(SCHEDULE).
+                    getJSONObject(currPair).
+                    getJSONArray(EMPLOYEE).
+                    getJSONObject(0).
+                    getString("photoLink");
         } catch (JSONException e) {
             return  "-";
         }

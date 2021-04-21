@@ -10,8 +10,13 @@ public class BSUIRLesson {
     private final HashSet<Integer> weeks;
     private final String weekDay;
     private final String auditory;
+    private final String teacherPhoto;
 
-    public BSUIRLesson(String subjectName, String time, String teacher, String type, String weekDay, HashSet<Integer> weeks, String auditory) {
+    public String getTeacherPhoto() {
+        return teacherPhoto;
+    }
+
+    public BSUIRLesson(String subjectName, String time, String teacher, String type, String weekDay, HashSet<Integer> weeks, String auditory, String teacherPhoto) {
         this.subjectName = subjectName;
         this.time = time;
         this.teacher = teacher;
@@ -19,6 +24,8 @@ public class BSUIRLesson {
         this.weekDay = weekDay;
         this.weeks = weeks;
         this.auditory = auditory;
+        this.teacherPhoto = teacherPhoto;
+
     }
 
     public HashSet<Integer> getWeeks() {

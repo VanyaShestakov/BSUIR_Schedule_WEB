@@ -43,17 +43,18 @@ public class HTMLWriter {
                 for (int j = 0; j < list.get(i).size(); j++) {
                     BSUIRLesson currLesson = list.get(i).get(j);
                     if (currLesson.getWeeks().contains(currentWeek)){
-                        String borderStyle = "";
-                        switch (currLesson.getType()) {
-                            case "ЛК" -> borderStyle = GREEN_BORDER_STYLE;
-                            case "ПЗ" -> borderStyle = YELLOW_BORDER_STYLE;
-                            case "ЛР" -> borderStyle = RED_BORDER_STYLE;
-                        }
-                        sb.append("<div style=\"border:" + borderStyle + "\" id=\"content2\">\n" + "<h1>" + currLesson.getSubjectName() + "  (" +
-                                currLesson.getType()  + ")    "  + currLesson.getTime() + "</h1>" +
-                                " <p class=\"text\">Аудитория: " + currLesson.getAuditory() + "</p>" +
-                                " <p class=\"text\">Преподаватель: " + currLesson.getTeacher() + "</p>" +
-                                "<img style=\"border-radius: 100%;\" src=\"" + currLesson.getTeacherPhoto() + "\" width=\"100px\" >"  + "</div>");
+                        String borderStyle = getBorderStyle(currLesson.getType());
+                        String subGroup = String.valueOf(currLesson.getSubGroup());
+                        subGroup = subGroup.equals("0") ? "Вся группа" : subGroup;
+                        sb.append("<div style=\"border:" + borderStyle + "\" id=\"content2\">\n" +
+                                "<img style=\"border-radius: 100%; float:left; margin-top:5%; margin-bottom:12%; margin-right:25px\" src=\"" + currLesson.getTeacherPhoto() + "\" width=\"100px\" >"+
+                                "<h2>" + currLesson.getSubjectName() + "  (" +
+                                currLesson.getType()  + ")    "  + currLesson.getTime() + "</h2>" +
+                                " <p class=\"text\">" +
+                                "Аудитория: " + currLesson.getAuditory() + "<br>" +
+                                "Преподаватель: " + currLesson.getTeacher() + "<br>" +
+                                "Подгруппа: " + subGroup +
+                                "</p>" + "</div>");
                     }
                 }
             }
@@ -75,6 +76,16 @@ public class HTMLWriter {
         Date currDate = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
         return weekDays.indexOf(sdf.format(currDate));
+    }
+
+    private String getBorderStyle(String lessonType) {
+        String borderStyle = "";
+        switch (lessonType) {
+            case "ЛК" -> borderStyle = GREEN_BORDER_STYLE;
+            case "ПЗ" -> borderStyle = YELLOW_BORDER_STYLE;
+            case "ЛР" -> borderStyle = RED_BORDER_STYLE;
+        }
+        return borderStyle;
     }
 
 }

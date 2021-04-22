@@ -11,12 +11,10 @@ public class BSUIRLesson {
     private final String weekDay;
     private final String auditory;
     private final String teacherPhoto;
+    private final int subGroup;
 
-    public String getTeacherPhoto() {
-        return teacherPhoto;
-    }
-
-    public BSUIRLesson(String subjectName, String time, String teacher, String type, String weekDay, HashSet<Integer> weeks, String auditory, String teacherPhoto) {
+    public BSUIRLesson(String subjectName, String time, String teacher, String type, String weekDay,
+                       HashSet<Integer> weeks, String auditory, String teacherPhoto, int subGroup) {
         this.subjectName = subjectName;
         this.time = time;
         this.teacher = teacher;
@@ -25,7 +23,7 @@ public class BSUIRLesson {
         this.weeks = weeks;
         this.auditory = auditory;
         this.teacherPhoto = teacherPhoto;
-
+        this.subGroup = subGroup;
     }
 
     public HashSet<Integer> getWeeks() {
@@ -34,11 +32,6 @@ public class BSUIRLesson {
 
     public String getWeekDay() {
         return weekDay;
-    }
-
-    @Override
-    public String toString() {
-        return subjectName + "(" + type + ") " + time + "\n"+ "(" + auditory + ")\n" + teacher;
     }
 
     public String getSubjectName() {
@@ -59,5 +52,18 @@ public class BSUIRLesson {
 
     public String getAuditory() {
         return auditory;
+    }
+
+    public String getTeacherPhoto() {
+        return teacherPhoto;
+    }
+
+    public int getSubGroup() {
+        return subGroup;
+    }
+
+    @Override
+    public String toString() {
+        return subjectName + "(" + type + ") " + time + "\n"+ "(" + auditory + ")\n" + teacher;
     }
 }

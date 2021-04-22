@@ -7,6 +7,8 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class HTMLWriter {
+
+
     private static final String GREEN_BORDER_STYLE = "3px solid #00ff80";
     private static final String RED_BORDER_STYLE = "3px solid red";
     private static final String YELLOW_BORDER_STYLE = "3px solid yellow";
@@ -46,15 +48,16 @@ public class HTMLWriter {
                         String borderStyle = getBorderStyle(currLesson.getType());
                         String subGroup = String.valueOf(currLesson.getSubGroup());
                         subGroup = subGroup.equals("0") ? "Вся группа" : subGroup;
-                        sb.append("<div style=\"border:" + borderStyle + "\" id=\"content2\">\n" +
-                                "<img style=\"border-radius: 100%; float:left; margin-top:5%; margin-bottom:12%; margin-right:25px\" src=\"" + currLesson.getTeacherPhoto() + "\" width=\"100px\" >"+
+                        sb.append("<div style=\"border:" + borderStyle + "\" class=\"lesson_container\">\n" +
+                                "<img class=\"teacher_photo\" src=\"" + currLesson.getTeacherPhoto() + "\">"+
+                                "<div class=\"lesson_info\">" +
                                 "<h2>" + currLesson.getSubjectName() + "  (" +
                                 currLesson.getType()  + ")    "  + currLesson.getTime() + "</h2>" +
                                 " <p class=\"text\">" +
                                 "Аудитория: " + currLesson.getAuditory() + "<br>" +
                                 "Преподаватель: " + currLesson.getTeacher() + "<br>" +
                                 "Подгруппа: " + subGroup +
-                                "</p>" + "</div>");
+                                "</p>" + "</div>" + "</div>");
                     }
                 }
             }
@@ -66,7 +69,7 @@ public class HTMLWriter {
     }
 
     public String getScheduleInfo() {
-        return "<div id=\"content2\">\n"+
+        return "<div class=\"lesson_container\">\n"+
                 " <p class=\"text\">Номер группы: " + schedule.getGroupNumber() + "</p>" +
                 " <p class=\"text\">Текущая неделя: " + schedule.getCurrentWeek() + "</p>" +
                 " <p class=\"text\">Текущая дата: " + schedule.getTodayDate() + "</p>" +"</div>";

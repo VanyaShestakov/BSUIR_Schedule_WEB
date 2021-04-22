@@ -1,8 +1,112 @@
+/*//////////////GROUP SCHEDULE STYLES/////////////////*/
+#content {
+	display: block;
+	width: 500px;
+	min-width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+}
+
+#content1 {
+	display: block;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+}
+
+.lesson_container {
+	position: relative;
+	color:white;
+	background: rgba(0,0,0,0.5);
+	font-family: "Veranda", sans-serif;
+	font-size: 17px;
+	padding: 15px 25px 25px 25px;
+	margin-bottom: 20px;
+	border-radius: 20px;
+}
+
+.page_button {
+	text-decoration: none;
+	color:white;
+	font-family: "Veranda", sans-serif ;
+	font-size: 16px;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 20px;
+	transition : 0.4s;
+	font-weight: 700;
+	text-transform: uppercase;
+	background-color: rgba(255,255,255,0);
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+.page_button:hover {
+	background-color: yellow;
+	transition: 0.2s;
+	color: black;
+}
+
+.inputEdit {
+	text-decoration: none;
+	color:white;
+	font-family: "Veranda", sans-serif ;
+	font-size: 16px;
+	display: block;
+	height: 50px;
+	line-height: 25px;
+	width: 200px;
+	padding-left: 20px;
+	padding-right: 20px;
+	transition: 0.4s;
+	font-weight: 700;/*толщина шрифта*/
+	background-color: #454545;
+	border-radius: 10px;
+	outline: none; border: none;
+}
+
+.get_button {
+	text-decoration: none;
+	color:white;
+	font-family: "Veranda", sans-serif ;
+	font-size: 16px;
+	display: block;
+	height: 50px;
+	line-height: 25px;
+	width: 220px;
+	padding-left: 20px;
+	padding-right: 20px;
+	transition: 0.4s;
+	font-weight: 700;/*толщина шрифта*/
+	background-color: #454545;
+	border-radius: 10px;
+}
+
+.get_button:hover {
+	background-color: yellow;
+	transition: 0.2s;
+	color: black;
+}
+
+
+.teacher_photo {
+	border-radius: 100%;
+	float:left;
+	position: absolute;
+	top: 25%;
+	margin-right:25px;
+	width:100px;
+}
+
+.lesson_info {
+	margin-left: 125px ;
+}
 
 /*//////////////PAGE/////////////////*/
-
-
-
 #logo{
 	float: left;
 	width: 100px;
@@ -251,33 +355,6 @@ p {
 	line-height: 1.5;
 }
 
-#content {
-	display: block;
-	width: 500px;
-	min-width: 450px;
-	margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-   }
-
-#content1 {
-	display: block;
-	width: 100%;
-	margin-left: auto;
-    margin-right: auto;
-    margin-top: 5px;
-}
-
-#content2 {
-	color:white;
-	background: rgba(0,0,0,0.5);
-	font-family: "Veranda", sans-serif;
-	font-size: 17px;
-	padding: 15px 25px 25px 25px;
-	margin-bottom: 20px;
-	border-radius: 20px;
-}
-
 .data {
 	color:#616060;
 	font-family: "Veranda", sans-serif;
@@ -337,72 +414,6 @@ tr {
 	height: 300px;
 	border-radius: 5px;
 
-}
-
-.a-shop {
-	text-decoration: none;
-	color:white;
-	font-family: "Veranda", sans-serif ;
-	font-size: 16px;
-	display: block;
-	height: 50px;
-	line-height: 25px;
-	width: 220px;
-	padding-left: 20px;
-	padding-right: 20px;
-	transition: 0.4s;
-	font-weight: 700;/*толщина шрифта*/
-	background-color: #454545;
-	border-radius: 10px;
-}
-
-.page_button {
-	text-decoration: none;
-	color:white;
-	font-family: "Veranda", sans-serif ;
-	font-size: 16px;
-	display: block;
-	height: 50px;
-	line-height: 50px;
-	padding: 0 20px;
-	transition : 0.4s;
-	font-weight: 700;
-	text-transform: uppercase;
-	background-color: rgba(255,255,255,0);
-	border-top: none;
-	border-left: none;
-	border-right: none;
-}
-
-.page_button:hover {
-	background-color: yellow;
-	transition: 0.2s;
-	color: black;
-}
-
-
-.inputEdit {
-	text-decoration: none;
-	color:white;
-	font-family: "Veranda", sans-serif ;
-	font-size: 16px;
-	display: block;
-	height: 50px;
-	line-height: 25px;
-	width: 200px;
-	padding-left: 20px;
-	padding-right: 20px;
-	transition: 0.4s;
-	font-weight: 700;/*толщина шрифта*/
-	background-color: #454545;
-	border-radius: 10px;
-	outline: none; border: none;
-}
-
-.a-shop:hover {
-	background-color: yellow;
-	transition: 0.2s;
-	color: black;
 }
 
 .shop-img {

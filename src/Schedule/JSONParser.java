@@ -15,11 +15,19 @@ class JSONParser {
     private static final String SUBJECT = "subject";
     private static final String LESSON_TIME = "lessonTime";
     private static final String EMPLOYEE = "employee";
-    private static final String FIO = "fio";
+
     private static final String LESSON_TYPE = "lessonType";
     private static final String AUDITORY = "auditory";
     private static final String WEEK_NUMBER = "weekNumber";
     private final JSONObject jsonObject;
+
+    private static final String FIRST_NAME = "firstName";
+    private static final String LAST_NAME = "lastName";
+    private static final String MIDDLE_NAME = "middleName";
+    private static final String RANK = "rank";
+    private static final String PHOTO_LINK = "photoLink";
+    private static final String ID = "id";
+    private static final String FIO = "fio";
 
     public JSONParser(JSONObject jsonObject) {
         this.jsonObject = jsonObject;
@@ -133,31 +141,33 @@ class JSONParser {
                 getInt("numSubgroup");
     }
 //TEACHER
-private String getTeacherFirstName(int currDay, int currPair) {
-    try {
-        return  jsonObject.
-                getJSONArray(SCHEDULES).
-                getJSONObject(currDay).
-                getJSONArray(SCHEDULE).
-                getJSONObject(currPair).
-                getJSONArray(EMPLOYEE).
-                getJSONObject(0).
-                getString(FIO);
-    } catch (JSONException e) {
-        return  "-";
-    }
-}
-
-    private String getTeacherFIO(int currDay, int currPair) {
+    private String getTeacherFirstName(int currDay, int currPair) {
         try {
-            return  jsonObject.
-                    getJSONArray(SCHEDULES).
-                    getJSONObject(currDay).
-                    getJSONArray(SCHEDULE).
-                    getJSONObject(currPair).
-                    getJSONArray(EMPLOYEE).
-                    getJSONObject(0).
-                    getString(FIO);
+            return getTeacherObj(currDay, currPair).getString(FIRST_NAME);
+        } catch (JSONException e) {
+            return  "-";
+        }
+    }
+
+    private String getTeacherLastName(int currDay, int currPair) {
+        try {
+            return getTeacherObj(currDay, currPair).getString(LAST_NAME);
+        } catch (JSONException e) {
+            return  "-";
+        }
+    }
+
+    private String getTeacherMiddleName(int currDay, int currPair) {
+        try {
+            return getTeacherObj(currDay, currPair).getString(MIDDLE_NAME);
+        } catch (JSONException e) {
+            return  "-";
+        }
+    }
+
+    private String getTeacherRank(int currDay, int currPair) {
+        try {
+            return getTeacherObj(currDay, currPair).getString(RANK);
         } catch (JSONException e) {
             return  "-";
         }
@@ -165,18 +175,38 @@ private String getTeacherFirstName(int currDay, int currPair) {
 
     private String getTeacherPhotoLink(int currDay, int currPair) {
         try {
-            return  jsonObject.
-                    getJSONArray(SCHEDULES).
-                    getJSONObject(currDay).
-                    getJSONArray(SCHEDULE).
-                    getJSONObject(currPair).
-                    getJSONArray(EMPLOYEE).
-                    getJSONObject(0).
-                    getString("photoLink");
+            return getTeacherObj(currDay, currPair).getString("photoLink");
         } catch (JSONException e) {
             return  "CSS/Images/default.jpg";
         }
     }
+
+    private int getTeacherID(int currDay, int currPair) {
+        try {
+            return getTeacherObj(currDay, currPair).getInt(ID);
+        } catch (JSONException e) {
+            return  -1;
+        }
+    }
+
+    private String getTeacherFIO(int currDay, int currPair) {
+        try {
+            return getTeacherObj(currDay, currPair).getString(FIO);
+        } catch (JSONException e) {
+            return  "-";
+        }
+    }
+
+    private JSONObject getTeacherObj(int currDay, int currPair) {
+        return  jsonObject.
+                getJSONArray(SCHEDULES).
+                getJSONObject(currDay).
+                getJSONArray(SCHEDULE).
+                getJSONObject(currPair).
+                getJSONArray(EMPLOYEE).
+                getJSONObject(0);
+    }
+
 
 
 

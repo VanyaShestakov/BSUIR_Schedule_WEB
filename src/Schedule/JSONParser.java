@@ -36,14 +36,21 @@ class JSONParser {
             for (int currPair = 0; currPair < pairsAmount; currPair++) {
                 String subjectName = getSubjectName(currDay, currPair);
                 String time = getTime(currDay, currPair);
-                String teacher = getTeacher(currDay, currPair);
                 String type = getType(currDay, currPair);
                 String weekDay = getWeekday(currDay);
                 String auditory = getAuditory(currDay, currPair);
                 HashSet<Integer> weeks = getWeeks(currDay, currPair);
-                String teacherPhoto = getTeacherPhoto(currDay, currPair);
                 int subGroup = getSubGroup(currDay, currPair);
-                BSUIRLesson currLesson = new BSUIRLesson(subjectName, time, teacher, type, weekDay, weeks, auditory, teacherPhoto, subGroup);
+
+                String firstName;
+                String lastName;
+                String middleName;
+                String rank;
+                String photoLink = getTeacherPhotoLink(currDay, currPair);
+                int id;
+                String fio = getTeacherFIO(currDay, currPair);
+
+                BSUIRLesson currLesson = new BSUIRLesson(subjectName, time, fio, type, weekDay, weeks, auditory, photoLink, subGroup);
                 currPairs.add(currLesson);
             }
             weekDays.add(currPairs);
@@ -71,36 +78,6 @@ class JSONParser {
                 getJSONArray(SCHEDULE).
                 getJSONObject(currPair).
                 getString(LESSON_TIME);
-    }
-
-    private String getTeacher(int currDay, int currPair) {
-        try {
-            return  jsonObject.
-                    getJSONArray(SCHEDULES).
-                    getJSONObject(currDay).
-                    getJSONArray(SCHEDULE).
-                    getJSONObject(currPair).
-                    getJSONArray(EMPLOYEE).
-                    getJSONObject(0).
-                    getString(FIO);
-        } catch (JSONException e) {
-            return  "-";
-        }
-    }
-
-    private String getTeacherPhoto(int currDay, int currPair) {
-        try {
-            return  jsonObject.
-                    getJSONArray(SCHEDULES).
-                    getJSONObject(currDay).
-                    getJSONArray(SCHEDULE).
-                    getJSONObject(currPair).
-                    getJSONArray(EMPLOYEE).
-                    getJSONObject(0).
-                    getString("photoLink");
-        } catch (JSONException e) {
-            return  "CSS/Images/default.jpg";
-        }
     }
 
     private String getType(int currDay, int currPair) {
@@ -154,6 +131,51 @@ class JSONParser {
                 getJSONArray(SCHEDULE).
                 getJSONObject(currPair).
                 getInt("numSubgroup");
+    }
+//TEACHER
+private String getTeacherFirstName(int currDay, int currPair) {
+    try {
+        return  jsonObject.
+                getJSONArray(SCHEDULES).
+                getJSONObject(currDay).
+                getJSONArray(SCHEDULE).
+                getJSONObject(currPair).
+                getJSONArray(EMPLOYEE).
+                getJSONObject(0).
+                getString(FIO);
+    } catch (JSONException e) {
+        return  "-";
+    }
+}
+
+    private String getTeacherFIO(int currDay, int currPair) {
+        try {
+            return  jsonObject.
+                    getJSONArray(SCHEDULES).
+                    getJSONObject(currDay).
+                    getJSONArray(SCHEDULE).
+                    getJSONObject(currPair).
+                    getJSONArray(EMPLOYEE).
+                    getJSONObject(0).
+                    getString(FIO);
+        } catch (JSONException e) {
+            return  "-";
+        }
+    }
+
+    private String getTeacherPhotoLink(int currDay, int currPair) {
+        try {
+            return  jsonObject.
+                    getJSONArray(SCHEDULES).
+                    getJSONObject(currDay).
+                    getJSONArray(SCHEDULE).
+                    getJSONObject(currPair).
+                    getJSONArray(EMPLOYEE).
+                    getJSONObject(0).
+                    getString("photoLink");
+        } catch (JSONException e) {
+            return  "CSS/Images/default.jpg";
+        }
     }
 
 

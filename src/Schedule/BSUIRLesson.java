@@ -12,9 +12,39 @@ public class BSUIRLesson {
     private final String auditory;
     private final String teacherPhoto;
     private final int subGroup;
+    //private Teacher teacher;
 
-    public BSUIRLesson(String subjectName, String time, String teacher, String type, String weekDay,
-                       HashSet<Integer> weeks, String auditory, String teacherPhoto, int subGroup) {
+
+    private class Teacher {
+        private String firstName;
+        private String lastName;
+        private String middleName;
+        private String rank;
+        private String photoLink;
+        private int id;
+        private String fio;
+
+        public Teacher(String firstName, String lastName, String middleName,
+                       String rank, String photoLink, int id, String fio) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.middleName = middleName;
+            this.rank = rank;
+            this.photoLink = photoLink;
+            this.id = id;
+            this.fio = fio;
+        }
+    }
+
+    public BSUIRLesson(String subjectName,
+                       String time,
+                       String teacher,
+                       String type,
+                       String weekDay,
+                       HashSet<Integer> weeks,
+                       String auditory,
+                       String teacherPhoto,
+                       int subGroup) {
         this.subjectName = subjectName;
         this.time = time;
         this.teacher = teacher;

@@ -15,6 +15,10 @@ public class BSUIRSchedule {
     private final String groupNumber;
     private final String todayDate;
 
+    public String getTodayDate() {
+        return todayDate;
+    }
+
     public int getCurrentWeek() {
         return currentWeek;
     }
@@ -35,10 +39,6 @@ public class BSUIRSchedule {
 
     public ArrayList<ArrayList<BSUIRLesson>> getScheduleList() {
         return scheduleList;
-    }
-
-    public String getTodayDate() {
-        return todayDate;
     }
 
     @Override

@@ -49,13 +49,13 @@ public class HTMLWriter {
                         String subGroup = String.valueOf(currLesson.getSubGroup());
                         subGroup = subGroup.equals("0") ? "Вся группа" : subGroup;
                         sb.append("<div style=\"border:" + borderStyle + "\" class=\"lesson_container\">\n" +
-                                "<img class=\"teacher_photo\" src=\"" + currLesson.getTeacherPhoto() + "\">"+
+                                "<img class=\"teacher_photo\" src=\"" + currLesson.getTeacher().getPhotoLink() + "\">"+
                                 "<div class=\"lesson_info\">" +
                                 "<h2>" + currLesson.getSubjectName() + "  (" +
                                 currLesson.getType()  + ")    "  + currLesson.getTime() + "</h2>" +
                                 " <p class=\"text\">" +
                                 "Аудитория: " + currLesson.getAuditory() + "<br>" +
-                                "Преподаватель: " + currLesson.getTeacher() + "<br>" +
+                                "Преподаватель: " + currLesson.getTeacher().getFio() + "<br>" +
                                 "Подгруппа: " + subGroup +
                                 "</p>" + "</div>" + "</div>");
                     }

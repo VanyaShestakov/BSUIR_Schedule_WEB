@@ -50,15 +50,15 @@ class JSONParser {
                 HashSet<Integer> weeks = getWeeks(currDay, currPair);
                 int subGroup = getSubGroup(currDay, currPair);
 
-                String firstName;
-                String lastName;
-                String middleName;
-                String rank;
+                String firstName = getTeacherFirstName(currDay, currPair);
+                String lastName = getTeacherLastName(currDay, currPair);
+                String middleName = getTeacherMiddleName(currDay, currPair);
+                String rank = getTeacherRank(currDay, currPair);
                 String photoLink = getTeacherPhotoLink(currDay, currPair);
-                int id;
+                int id = getTeacherID(currDay, currPair);
                 String fio = getTeacherFIO(currDay, currPair);
-
-                BSUIRLesson currLesson = new BSUIRLesson(subjectName, time, fio, type, weekDay, weeks, auditory, photoLink, subGroup);
+                BSUIRTeacher teacher = new BSUIRTeacher(firstName, lastName, middleName, rank, photoLink, id, fio);
+                BSUIRLesson currLesson = new BSUIRLesson(subjectName, time, type, weekDay, weeks, auditory, subGroup, teacher);
                 currPairs.add(currLesson);
             }
             weekDays.add(currPairs);

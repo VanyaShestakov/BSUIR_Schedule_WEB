@@ -34,11 +34,16 @@ class JSONParser {
     }
 
     public ArrayList<ArrayList<BSUIRLesson>> parseToList() {
-        ArrayList<ArrayList<BSUIRLesson>> weekDays = new ArrayList<>();
-        for (int currDay = 0; currDay < jsonObject.getJSONArray(SCHEDULES).length(); currDay++) {
-            int pairsAmount = jsonObject.getJSONArray(SCHEDULES).
-                    getJSONObject(currDay).
-                    getJSONArray(SCHEDULE).length();
+        ArrayList<ArrayList<BSUIRLesson>> weekDays = new ArrayList<>(7);
+        for (int currDay = 0; currDay < 7 /*jsonObject.getJSONArray(SCHEDULES).length()*/; currDay++) {
+            int pairsAmount;
+            try {
+                pairsAmount = jsonObject.getJSONArray(SCHEDULES).
+                        getJSONObject(currDay).
+                        getJSONArray(SCHEDULE).length();
+            } catch (JSONException e) {
+                pairsAmount = 0;
+            }
 
             ArrayList<BSUIRLesson> currPairs = new ArrayList<>();
             for (int currPair = 0; currPair < pairsAmount; currPair++) {

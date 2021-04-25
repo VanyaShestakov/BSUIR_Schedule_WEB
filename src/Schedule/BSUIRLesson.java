@@ -10,7 +10,7 @@ public class BSUIRLesson {
     private final String weekDay;
     private final String auditory;
     private final int subGroup;
-    private BSUIRTeacher teacher;
+    private final BSUIRTeacher teacher;
 
     public BSUIRLesson(String subjectName,
                        String time,

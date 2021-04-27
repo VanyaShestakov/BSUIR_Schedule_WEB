@@ -1,5 +1,6 @@
-package Schedule;
+package JSON;
 
+import Schedule.BSUIRTeacher;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

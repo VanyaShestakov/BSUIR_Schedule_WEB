@@ -1,4 +1,4 @@
-package Schedule.JSONTools.Exceptions;
+package JSON.Exceptions;
 
 public class JSONDataIsEmptyException extends RuntimeException {
     public JSONDataIsEmptyException() {

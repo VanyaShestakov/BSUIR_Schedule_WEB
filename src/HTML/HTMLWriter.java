@@ -1,4 +1,4 @@
-package Controller.Tools;
+package HTML;
 
 import Schedule.BSUIRLesson;
 import Schedule.BSUIRSchedule;

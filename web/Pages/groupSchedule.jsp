@@ -1,7 +1,6 @@
 <%@ page import="Schedule.BSUIRSchedule" %>
 <%@ page import="Schedule.BSUIRLesson" %>
-<%@ page import="Controller.Tools.HTMLConverter" %>
-<%@ page import="Controller.Tools.HTMLWriter" %>
+<%@ page import="HTML.HTMLWriter" %>
 <%@ page import="java.util.*" %>
 <%--
   Created by IntelliJ IDEA.

@@ -1,5 +1,7 @@
 package Schedule;
 
+import JSON.JSONRequester;
+import JSON.JSONScheduleParser;
 import Schedule.ScheduleTools.Exceptions.WeekDayDoesNotExistsException;
 import Schedule.ScheduleTools.Exceptions.WeekNumberDoesNotExistsException;
 import org.json.JSONObject;

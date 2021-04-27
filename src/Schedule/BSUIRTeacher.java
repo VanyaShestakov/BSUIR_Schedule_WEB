@@ -1,12 +1,12 @@
 package Schedule;
 
 public class BSUIRTeacher {
+    private final int id;
     private final String firstName;
     private final String lastName;
     private final String middleName;
     private final String rank;
     private final String photoLink;
-    private final int id;
     private final String fio;
 
     public BSUIRTeacher(String firstName, String lastName, String middleName,
@@ -46,5 +46,15 @@ public class BSUIRTeacher {
 
     public String getFio() {
         return fio;
+    }
+
+    @Override
+    public String toString(){
+        return  firstName + "\n" +
+                lastName + "\n" +
+                middleName + "\n" +
+                rank + "\n" +
+                photoLink + "\n" +
+                fio + "\n" + id;
     }
 }

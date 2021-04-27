@@ -30,15 +30,18 @@ public class HTMLWriter {
         StringBuilder sb = new StringBuilder();
         HashSet<Integer> usedWeeks = new HashSet<>();
         Date currDate = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
+        GregorianCalendar calendar = new GregorianCalendar();
         int weekDayIndex = getWeekDayIndex();
         String mark = "(Сегодня)";
+        String dayInfo;
         do {
             usedWeeks.add(currentWeek);
             sb.append("<br><center><h2>"+ "Неделя: " + currentWeek + "</h2></center>");
             for (int i = weekDayIndex; i < list.size(); i++) {
-                sb.append("<br><h2>" + weekDays.get(i).toUpperCase(Locale.ROOT) + mark + "</h2>");
-
+                dayInfo = weekDays.get(i).toUpperCase(Locale.ROOT) + mark + " " + sdf.format(calendar.getTime());
+                sb.append("<br><h2 align=\"justify\">" + dayInfo + "</h2>");
+                calendar.add(Calendar.DAY_OF_MONTH, 1);
                 if (list.get(i).size() != 0) {
                     for (int j = 0; j < list.get(i).size(); j++) {
                         BSUIRLesson currLesson = list.get(i).get(j);
@@ -61,8 +64,8 @@ public class HTMLWriter {
                 } else {
                     sb.append("<div class=\"lesson_container\"><center><h2>Занятий нет</h2></center></div>");
                 }
+                mark = "";
             }
-            mark = "";
             weekDayIndex = 0;
             currentWeek++;
             currentWeek = currentWeek > 4 ? 1 : currentWeek ;

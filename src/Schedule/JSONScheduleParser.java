@@ -8,7 +8,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-class JSONParser {
+public class JSONScheduleParser {
     private static final String SCHEDULES = "schedules";
     private static final String WEEKDAY = "weekDay";
     private static final String SCHEDULE = "schedule";
@@ -29,7 +29,7 @@ class JSONParser {
     private static final String ID = "id";
     private static final String FIO = "fio";
 
-    public JSONParser(JSONObject jsonObject) {
+    public JSONScheduleParser(JSONObject jsonObject) {
         this.jsonObject = jsonObject;
     }
 
@@ -211,11 +211,5 @@ class JSONParser {
                 getJSONArray(EMPLOYEE).
                 getJSONObject(0);
     }
-
-
-
-
-
-
 
 }

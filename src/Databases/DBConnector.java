@@ -6,10 +6,7 @@ import Schedule.BSUIRTeacher;
 import com.mysql.cj.jdbc.Driver;
 import org.json.JSONArray;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class DBConnector {
@@ -43,6 +40,16 @@ public class DBConnector {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public ArrayList<BSUIRTeacher> getTeachersFromDB() {
+        ArrayList<BSUIRTeacher> teachers = new ArrayList<>();
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+            Statement statement = connection.createStatement();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return teachers;
     }
 
     private ArrayList<BSUIRTeacher> getTeachersArr() {

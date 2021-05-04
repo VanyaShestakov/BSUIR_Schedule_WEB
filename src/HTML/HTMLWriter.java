@@ -1,7 +1,9 @@
 package HTML;
 
+import Databases.DBConnector;
 import Schedule.BSUIRLesson;
 import Schedule.BSUIRSchedule;
+import Schedule.BSUIRTeacher;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -10,7 +12,7 @@ public class HTMLWriter {
     private static final String GREEN_BORDER_STYLE = "3px solid #00ff80";
     private static final String RED_BORDER_STYLE = "3px solid red";
     private static final String YELLOW_BORDER_STYLE = "3px solid yellow";
-    private final BSUIRSchedule schedule;
+    private BSUIRSchedule schedule;
     private final ArrayList<String> weekDays = new ArrayList<>(Arrays.asList
        ("понедельник",
         "вторник",
@@ -20,8 +22,12 @@ public class HTMLWriter {
         "суббота",
         "воскресенье"));
 
+
     public HTMLWriter(BSUIRSchedule schedule) {
         this.schedule = schedule;
+    }
+    public HTMLWriter() {
+
     }
 
     public String getHTMLSchedule () {
@@ -71,6 +77,25 @@ public class HTMLWriter {
             currentWeek = currentWeek > 4 ? 1 : currentWeek ;
         }while (!usedWeeks.contains(currentWeek));
         return sb.toString();
+    }
+
+    public String getTeachersInfo() {
+        DBConnector connector = new DBConnector();
+        ArrayList<BSUIRTeacher> teachers = connector.getTeachersFromDB();
+        String info = "";
+        for (BSUIRTeacher teacher: teachers) {
+            info += "<div class=\"lesson_container\">\n" +
+                    "<img class=\"teacher_photo\" src=\"" + teacher.getPhotoLink() + "\">" +
+                    "<div class=\"lesson_info\">" +
+                    " <p class=\"text\">" +
+                    teacher.getLastName() + "<br>" +
+                    teacher.getFirstName() + "<br>" +
+                    teacher.getMiddleName() + "<br>" +
+                    teacher.getRank() + "<br>" +
+                    teacher.getId() + "<br>" +
+                    "</p>" + "</div>" + "</div>";
+        }
+        return info;
     }
 
     public String getScheduleInfo() {

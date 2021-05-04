@@ -43,6 +43,10 @@
   <div id="content">
     <h1 align="center" >Преподователи</h1>
     <div id="content1">
+        <%
+            HTMLWriter writer = new HTMLWriter();
+            out.println(writer.getTeachersInfo());
+        %>
     </div>
   </div>
 

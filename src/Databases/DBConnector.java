@@ -46,6 +46,17 @@ public class DBConnector {
         ArrayList<BSUIRTeacher> teachers = new ArrayList<>();
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
             Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM teachers_info");
+            while (resultSet.next()) {
+                //System.out.println(resultSet.getInt("id"));
+                teachers.add(new BSUIRTeacher(resultSet.getString("first_name"),
+                        resultSet.getString("last_name"),
+                        resultSet.getString("middle_name"),
+                        resultSet.getString("rank"),
+                        resultSet.getString("photo_link"),
+                        resultSet.getInt("id"),
+                        resultSet.getString("fio")));
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -87,7 +87,7 @@
             </h3>
         </div>
 
-        <div class="author" > <h3> Created by Shestakov Ivan</h3> </div>
+        <div class="author"><h3> Created by Shestakov Ivan</h3> </div>
     </footer>
 
 </div>

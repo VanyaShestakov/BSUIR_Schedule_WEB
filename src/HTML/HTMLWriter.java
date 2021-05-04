@@ -82,6 +82,7 @@ public class HTMLWriter {
     public String getTeachersInfo() {
         DBConnector connector = new DBConnector();
         ArrayList<BSUIRTeacher> teachers = connector.getTeachersFromDB();
+        Collections.sort(teachers, (Comparator.comparing(BSUIRTeacher::getLastName)));
         String info = "";
         for (BSUIRTeacher teacher: teachers) {
             info += "<div class=\"lesson_container\">\n" +

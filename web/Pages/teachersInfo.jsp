@@ -41,7 +41,7 @@
   </nav>
 
   <div id="content">
-    <h1 align="center" >Преподователи</h1>
+    <h1 align="center" >ПРЕПОДАВАТЕЛИ</h1>
     <div id="content1">
         <%
             HTMLWriter writer = new HTMLWriter();

@@ -7,9 +7,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class BSUIRSchedule {
-    private static final String TITLE_SEPARATOR = "------------------------\n";
-    private static final int MIN_WEEK_NUMBER = 1;
-    private static final int MAX_WEEK_NUMBER = 1;
     private final ArrayList<ArrayList<BSUIRLesson>> scheduleList;
     private final int currentWeek;
     private final String groupNumber;

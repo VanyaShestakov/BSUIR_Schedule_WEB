@@ -27,6 +27,7 @@ public class GroupScheduleServlet extends HttpServlet {
         String schedule = "";
         try {
             HTMLWriter writer = new HTMLWriter(new BSUIRSchedule(request.getParameter("groupNumber")));
+            request.setAttribute("chosenGroup", request.getParameter("groupNumber"));
             schedule = writer.getScheduleInfo() + writer.getHTMLSchedule();
         } catch (JSONException e) {
             schedule = "JSON Error";

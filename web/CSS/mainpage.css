@@ -19,7 +19,7 @@
 .lesson_container {
 	position: relative;
 	color:white;
-	background: rgba(0,0,0,0.5);
+	background: #161b21;
 	font-family: "Veranda", sans-serif;
 	font-size: 17px;
 	padding: 15px 25px 25px 25px;
@@ -46,7 +46,7 @@
 }
 
 .page_button:hover {
-	background-color: yellow;
+	background-color: #806afc;
 	transition: 0.2s;
 	color: black;
 }
@@ -64,7 +64,7 @@
 	padding-right: 20px;
 	transition: 0.4s;
 	font-weight: 700;/*толщина шрифта*/
-	background-color: #454545;
+	background-color: #4e4e6c;
 	border-radius: 10px;
 	outline: none; border: none;
 }
@@ -82,12 +82,12 @@
 	padding-right: 20px;
 	transition: 0.4s;
 	font-weight: 700;/*толщина шрифта*/
-	background-color: #454545;
+	background-color: #4e4e6c;
 	border-radius: 10px;
 }
 
 .get_button:hover {
-	background-color: yellow;
+	background-color:  #806afc;
 	transition: 0.2s;
 	color: black;
 }
@@ -114,7 +114,7 @@
 	position: fixed;
 }
 body {
-	background: url(Images/background.jpg);
+	background-color: #0d1017;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover; 
@@ -180,7 +180,7 @@ body {
 }
 
 .a-main:hover {
-	color: yellow;
+	color:  #806afc;
 	transition: 0.2s;
 }
 
@@ -201,14 +201,14 @@ body {
 }
 
 .a-main-blog:hover {
-	background-color: yellow;
+	background-color:  #806afc;
 	transition: 0.2s;
 	color: black;
 }
 
 .a-main-p {
 	text-decoration: none;
-	color: yellow;
+	color:  #806afc;
 }
 
 .a-main-p:hover {
@@ -269,7 +269,7 @@ body {
 }
 
 .a-footer:hover {
-	color: yellow;
+	color:  #806afc;
 	transition: 0.2s;
 }
 
@@ -286,7 +286,7 @@ body {
 /*///////////MENU/////////////*/
 
 #menu {
-	background-color: #1c1c1c;
+	background-color: #161b21;
 	width: 100%;
 	height: 50px;
 	top: 0;
@@ -328,14 +328,14 @@ body {
 }
 
 #navbar a:hover {
-	background-color: yellow;
+	background-color:  #806afc;
 	transition: 0.2s;
 	color: black;
 }
 
 
 #active {
- border-bottom: 2px solid yellow;
+ border-bottom: 2px solid  #806afc;
 }
 
 #logo-inst-vk{
@@ -387,7 +387,7 @@ tr {
 
 }
 .inf h3 a:hover {
-	color: yellow;
+	color:  #806afc;
 	transition: 0.2s;
 }
 

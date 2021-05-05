@@ -22,6 +22,7 @@
 <body>
 
 <div id="page">
+    <img src="CSS/Images/logo.png" width="50px" style="z-index: 50">
     <nav id="menu">
         <ul id="navbar">
             <li>
@@ -46,7 +47,7 @@
             <div class="lesson_container">
                 <form action="BSUIRSchedule" method="POST" >
                     <center>
-                        <h2>Номер группы:</h2> <input class="inputEdit" name="groupNumber" /><br><br>
+                        <h2>Номер группы:</h2> <input class="inputEdit" name="groupNumber" value="${chosenGroup}" /><br><br>
                         <input class="get_button" style="width: auto; outline: none; border: none;" type="submit" value="ПОЛУЧИТЬ РАСПИСАНИЕ"/>
                     </center>
                 </form>

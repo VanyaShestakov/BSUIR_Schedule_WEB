@@ -31,9 +31,17 @@ public class DBConnector {
             Statement statement = connection.createStatement();
             statement.addBatch("TRUNCATE TABLE teachers_info");
             for (BSUIRTeacher teacher: teachers) {
-                String data  = "(" + teacher.getId() + ", '" + teacher.getFirstName() + "', '" + teacher.getLastName() + "', '" +
-                        teacher.getMiddleName() + "', '" + teacher.getRank() +"', '" + teacher.getPhotoLink() + "', '" + teacher.getFio() + "')";
-                statement.addBatch("INSERT INTO teachers_info (id, first_name, last_name, middle_name, `rank`, photo_link, fio) " +
+                String data  = "(" +
+                        teacher.getId() + ", '" +
+                        teacher.getFirstName() + "', '" +
+                        teacher.getLastName() + "', '" +
+                        teacher.getMiddleName() + "', '" +
+                        teacher.getRank() +"', '" +
+                        teacher.getPhotoLink() + "', '" +
+                        teacher.getFio() + "')";
+                statement.addBatch("" +
+                        "INSERT INTO teachers_info " +
+                        "(id, first_name, last_name, middle_name, `rank`, photo_link, fio) " +
                         "VALUES " + data);
             }
             statement.executeBatch();
@@ -48,8 +56,8 @@ public class DBConnector {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM teachers_info");
             while (resultSet.next()) {
-                //System.out.println(resultSet.getInt("id"));
-                teachers.add(new BSUIRTeacher(resultSet.getString("first_name"),
+                teachers.add(new BSUIRTeacher(
+                        resultSet.getString("first_name"),
                         resultSet.getString("last_name"),
                         resultSet.getString("middle_name"),
                         resultSet.getString("rank"),
@@ -62,17 +70,19 @@ public class DBConnector {
         }
         return teachers;
     }
-
 
     public ArrayList<BSUIRTeacher> getTeachersWithFIO(String fio) {
         ArrayList<BSUIRTeacher> teachers = new ArrayList<>();
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM teachers_info " +
-                    "WHERE CONCAT(last_name, first_name, middle_name) like '%" + fio.replaceAll("\\s", "") + "%'");
+            ResultSet resultSet = statement.
+                    executeQuery("" +
+                            "SELECT * FROM teachers_info " +
+                            "WHERE CONCAT(last_name, first_name, middle_name) " +
+                            "LIKE '%" + fio.replaceAll("\\s", "") + "%'");
             while (resultSet.next()) {
-                //System.out.println(resultSet.getInt("id"));
-                teachers.add(new BSUIRTeacher(resultSet.getString("first_name"),
+                teachers.add(new BSUIRTeacher(
+                        resultSet.getString("first_name"),
                         resultSet.getString("last_name"),
                         resultSet.getString("middle_name"),
                         resultSet.getString("rank"),
@@ -85,8 +95,6 @@ public class DBConnector {
         }
         return teachers;
     }
-
-
 
     private ArrayList<BSUIRTeacher> getTeachersArr() {
         JSONRequester teachersRequester = new JSONRequester();

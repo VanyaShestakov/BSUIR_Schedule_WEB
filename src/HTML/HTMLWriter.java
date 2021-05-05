@@ -1,6 +1,5 @@
 package HTML;
 
-import Databases.DBConnector;
 import Schedule.BSUIRLesson;
 import Schedule.BSUIRSchedule;
 import Schedule.BSUIRTeacher;
@@ -84,15 +83,14 @@ public class HTMLWriter {
         teachers.sort((Comparator.comparing(BSUIRTeacher::getLastName)));
         String info = "";
         for (BSUIRTeacher teacher: teachers) {
-            info += "<div class=\"lesson_container\">\n" +
-                    "<img class=\"teacher_photo\" src=\"" + teacher.getPhotoLink() + "\">" +
+            info += "<div height=\"200px\" class=\"lesson_container\">\n" +
+                    "<img width=\"120px\" class=\"teacher_photo\" src=\"" + teacher.getPhotoLink() + "\">" +
                     "<div class=\"lesson_info\">" +
-                    " <p class=\"text\">" +
-                    teacher.getLastName() + "<br>" +
-                    teacher.getFirstName() + "<br>" +
-                    teacher.getMiddleName() + "<br>" +
-                    teacher.getRank() + "<br>" +
-                    teacher.getId() + "<br>" +
+                    " <p class=\"text\"> <h2>" +
+                    teacher.getLastName() + " " +
+                    teacher.getFirstName() + " " +
+                    teacher.getMiddleName() + "<br></h2>" +
+                    teacher.getRank() +
                     "</p>" + "</div>" + "</div>";
         }
         return info;

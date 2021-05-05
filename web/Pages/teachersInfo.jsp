@@ -43,10 +43,15 @@
   <div id="content">
     <h1 align="center" >ПРЕПОДАВАТЕЛИ</h1>
     <div id="content1">
-        <%
-            HTMLWriter writer = new HTMLWriter();
-            out.println(writer.getTeachersInfo());
-        %>
+      <div class="lesson_container">
+        <form  action="teachers" method="POST" >
+          <center>
+            <h2>Поиск преподавателя</h2> <input class="inputEdit" name="teacherName" /><br><br>
+            <input class="get_button" style="width: auto; outline: none; border: none;" type="submit" value="НАЙТИ ПРЕПОДАВАТЕЛЯ"/>
+          </center>
+        </form>
+      </div>
+        ${teachersInfo}
     </div>
   </div>
 

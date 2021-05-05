@@ -80,9 +80,7 @@ public class HTMLWriter {
         return sb.toString();
     }
 
-    public String getTeachersInfo() {
-        DBConnector connector = new DBConnector();
-        ArrayList<BSUIRTeacher> teachers = connector.getTeachersFromDB();
+    public String getTeachersInfo(ArrayList<BSUIRTeacher> teachers) {
         teachers.sort((Comparator.comparing(BSUIRTeacher::getLastName)));
         String info = "";
         for (BSUIRTeacher teacher: teachers) {

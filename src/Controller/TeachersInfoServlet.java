@@ -23,14 +23,10 @@ public class TeachersInfoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String path = "/Pages/teachersInfo.jsp";
         String teacherName = req.getParameter("teacherName");
-        System.out.println(teacherName);
-        if (teacherName == null) {
-            req.setAttribute("teachersInfo", "");
-        } else {
-            HTMLWriter writer = new HTMLWriter();
-            String teachersInfo = writer.getTeachersInfo();
-            req.setAttribute("teachersInfo", teachersInfo);
-            getServletContext().getRequestDispatcher(path).forward(req, resp);
-        }
+        HTMLWriter writer = new HTMLWriter();
+        DBConnector connector = new DBConnector();
+        String teachersInfo = writer.getTeachersInfo(connector.getTeachersWithFIO(teacherName));
+        req.setAttribute("teachersInfo", teachersInfo);
+        getServletContext().getRequestDispatcher(path).forward(req, resp);
     }
 }

@@ -29,7 +29,11 @@
                     <input id="active" class="page_button" style="width: auto; outline: none;" type="submit" value="Расписание группы"/>
                 </form>
             </li>
-            <li><a href="safety.html">Расписание преподавателей</a></li>
+            <li>
+                <form action="teachers" method="GET">
+                    <input class="page_button" style="width: auto; outline: none; " type="submit" value="Преподаватели"/>
+                </form>
+            </li>
             <li><a href="hills.html">Списки факультетов</a></li>
             <li><a href="shops.html">Экзамены</a></li>
         </ul>
@@ -39,11 +43,15 @@
     <div id="content">
         <h1 align="center" >РАСПИСАНИЕ ГРУППЫ</h1>
         <div id="content1">
-        <%
-            HTMLWriter writer = new HTMLWriter(new BSUIRSchedule(request.getParameter("groupNumber")));
-            out.println(writer.getScheduleInfo());
-            out.println(writer.getHTMLSchedule());
-        %>
+            <div class="lesson_container">
+                <form action="BSUIRSchedule" method="POST" >
+                    <center>
+                        <h2>Номер группы:</h2> <input class="inputEdit" name="groupNumber" /><br><br>
+                        <input class="get_button" style="width: auto; outline: none; border: none;" type="submit" value="ПОЛУЧИТЬ РАСПИСАНИЕ"/>
+                    </center>
+                </form>
+            </div>
+        ${schedule}
         </div>
     </div>
 

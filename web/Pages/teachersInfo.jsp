@@ -47,7 +47,12 @@
         <form  action="teachers" method="POST" >
           <center>
             <h2>Поиск преподавателя</h2> <input class="inputEdit" name="teacherName" /><br><br>
-            <input class="get_button" style="width: auto; outline: none; border: none;" type="submit" value="НАЙТИ ПРЕПОДАВАТЕЛЯ"/>
+            <input class="get_button" style="width: auto; outline: none; border: none;" type="submit" name="SEARCH" value="НАЙТИ ПРЕПОДАВАТЕЛЯ"/>
+          </center>
+        </form>
+        <form  action="teachers" method="POST" >
+          <center>
+            <input class="get_button" style="width: auto; outline: none; border: none;" type="submit" name="SEARCH_ALL" value="ПОКАЗАТЬ ВСЕХ"/>
           </center>
         </form>
       </div>

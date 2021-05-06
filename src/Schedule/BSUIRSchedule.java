@@ -1,7 +1,8 @@
 package Schedule;
 
+import JSON.Parsers.JSONParser;
 import JSON.JSONRequester;
-import JSON.JSONScheduleParser;
+import JSON.Parsers.ScheduleParser;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -27,11 +28,11 @@ public class BSUIRSchedule {
     public BSUIRSchedule(String groupNumber) {
         JSONRequester requester = new JSONRequester();
         String jsonData = requester.getGroupSchedule(groupNumber);
-        JSONScheduleParser parser = new JSONScheduleParser( new JSONObject(jsonData));
+        ScheduleParser parser = new JSONParser( new JSONObject(jsonData));
         this.currentWeek = requester.getCurrentWeek();
-        this.scheduleList = parser.parseToList();
+        this.scheduleList = parser.parseSchedule();
         this.groupNumber = groupNumber;
-        this.todayDate = parser.getTodayDate();
+        this.todayDate = parser.parseTodayDate();
     }
 
     public ArrayList<ArrayList<BSUIRLesson>> getScheduleList() {

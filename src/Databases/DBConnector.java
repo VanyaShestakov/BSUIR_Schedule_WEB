@@ -1,10 +1,11 @@
 package Databases;
 
+import JSON.Parsers.JSONParser;
 import JSON.JSONRequester;
-import JSON.JSONTeachersParser;
+import JSON.Parsers.TeachersParser;
 import Schedule.BSUIRTeacher;
 import com.mysql.cj.jdbc.Driver;
-import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -98,8 +99,8 @@ public class DBConnector {
 
     private ArrayList<BSUIRTeacher> getTeachersArr() {
         JSONRequester teachersRequester = new JSONRequester();
-        JSONArray array = new JSONArray(teachersRequester.getTeachers());
-        JSONTeachersParser teachersParser = new JSONTeachersParser(array);
-        return teachersParser.parseToList();
+        JSONObject object = new JSONObject(teachersRequester.getTeachers());
+        TeachersParser teachersParser = new JSONParser(object);
+        return teachersParser.parseTeachers();
     }
 }

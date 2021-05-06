@@ -1,4 +1,4 @@
-package JSON;
+package JSON.Parsers;
 
 
 import Schedule.BSUIRLesson;
@@ -10,7 +10,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class JSONScheduleParser {
+public class JSONParser implements ScheduleParser, TeachersParser {
     private static final String SCHEDULES = "schedules";
     private static final String WEEKDAY = "weekDay";
     private static final String SCHEDULE = "schedule";
@@ -21,7 +21,6 @@ public class JSONScheduleParser {
     private static final String LESSON_TYPE = "lessonType";
     private static final String AUDITORY = "auditory";
     private static final String WEEK_NUMBER = "weekNumber";
-    private final JSONObject jsonObject;
 
     private static final String FIRST_NAME = "firstName";
     private static final String LAST_NAME = "lastName";
@@ -31,11 +30,14 @@ public class JSONScheduleParser {
     private static final String ID = "id";
     private static final String FIO = "fio";
 
-    public JSONScheduleParser(JSONObject jsonObject) {
+    private JSONObject jsonObject;
+   // private JSONArray jsonArray;
+
+    public JSONParser(JSONObject jsonObject) {
         this.jsonObject = jsonObject;
     }
 
-    public ArrayList<ArrayList<BSUIRLesson>> parseToList() {
+    public ArrayList<ArrayList<BSUIRLesson>> parseSchedule() {
         ArrayList<ArrayList<BSUIRLesson>> weekDays = new ArrayList<>(7);
         for (int currDay = 0; currDay < 7 /*jsonObject.getJSONArray(SCHEDULES).length()*/; currDay++) {
             int pairsAmount;
@@ -73,8 +75,56 @@ public class JSONScheduleParser {
         return weekDays;
     }
 
-    public String getTodayDate() {
+    public String parseTodayDate() {
         return jsonObject.getString("todayDate");
+    }
+
+    public ArrayList<BSUIRTeacher> parseTeachers() {
+        JSONArray jsonArray = new JSONArray(this.jsonObject);
+        ArrayList<BSUIRTeacher> teachers = new ArrayList<>();
+        for (int i = 0; i < jsonArray.length(); i++) {
+            String firstName = getTeacherFirstName(jsonArray.getJSONObject(i));
+            String lastName = getTeacherLastName(jsonArray.getJSONObject(i));
+            String middleName = getTeacherMiddleName(jsonArray.getJSONObject(i));
+            String rank = getTeacherRank(jsonArray.getJSONObject(i));
+            String photoLink = getTeacherPhotoLink(jsonArray.getJSONObject(i));
+            int id = getTeacherID(jsonArray.getJSONObject(i));
+            String fio = getTeacherFIO(jsonArray.getJSONObject(i));
+            teachers.add(new BSUIRTeacher(firstName, lastName, middleName, rank, photoLink, id, fio));
+        }
+        return teachers;
+    }
+
+    private String getTeacherFirstName(JSONObject obj) {
+        return obj.getString(FIRST_NAME);
+    }
+
+    private String getTeacherLastName(JSONObject obj) {
+        return obj.getString(LAST_NAME);
+    }
+
+    private String getTeacherMiddleName(JSONObject obj) {
+        return obj.getString(MIDDLE_NAME);
+    }
+
+    private String getTeacherRank(JSONObject obj) {
+        try {
+            return obj.getString(RANK);
+        } catch (JSONException e) {
+            return "-";
+        }
+    }
+
+    private String getTeacherPhotoLink(JSONObject obj) {
+        return obj.getString(PHOTO_LINK);
+    }
+
+    private int getTeacherID(JSONObject obj) {
+        return obj.getInt(ID);
+    }
+
+    private String getTeacherFIO(JSONObject obj) {
+        return obj.getString(FIO);
     }
 
     private String getSubjectName(int currDay, int currPair) {
@@ -147,7 +197,7 @@ public class JSONScheduleParser {
                 getJSONObject(currPair).
                 getInt("numSubgroup");
     }
-//TEACHER
+    //TEACHER
     private String getTeacherFirstName(int currDay, int currPair) {
         try {
             return getTeacherObj(currDay, currPair).getString(FIRST_NAME);

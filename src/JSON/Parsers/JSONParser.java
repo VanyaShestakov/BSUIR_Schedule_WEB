@@ -30,13 +30,18 @@ public class JSONParser implements ScheduleParser, TeachersParser {
     private static final String ID = "id";
     private static final String FIO = "fio";
 
-    private JSONObject jsonObject;
+    private final JSONObject jsonObject;
    // private JSONArray jsonArray;
 
     public JSONParser(JSONObject jsonObject) {
         this.jsonObject = jsonObject;
     }
 
+    /**
+     *The method parses a json string into a {@code ArrayList<ArrayList<BSUIRLesson>>}
+     * that contains the students' schedule by week and day.
+     * @return {@code ArrayList<ArrayList<BSUIRLesson>>}
+     */
     public ArrayList<ArrayList<BSUIRLesson>> parseSchedule() {
         ArrayList<ArrayList<BSUIRLesson>> weekDays = new ArrayList<>(7);
         for (int currDay = 0; currDay < 7 /*jsonObject.getJSONArray(SCHEDULES).length()*/; currDay++) {

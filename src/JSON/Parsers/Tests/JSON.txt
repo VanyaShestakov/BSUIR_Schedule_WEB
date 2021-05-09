@@ -1,0 +1,2320 @@
+{
+  "employee": null,
+  "studentGroup": {
+    "name": "051007",
+    "facultyId": 20026,
+    "facultyName": null,
+    "specialityDepartmentEducationFormId": 20022,
+    "specialityName": null,
+    "course": 1,
+    "id": 23326,
+    "calendarId": "tg47avd00ouqefv661ebclkcu4@group.calendar.google.com"
+  },
+  "schedules": [
+    {
+      "weekDay": "Понедельник",
+      "schedule": [
+        {
+          "weekNumber": [
+            2,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "503-4 к."
+          ],
+          "lessonTime": "09:00-10:20",
+          "startLessonTime": "09:00",
+          "endLessonTime": "10:20",
+          "gradebookLesson": null,
+          "subject": "Физика",
+          "note": null,
+          "lessonType": "ПЗ",
+          "employee": [
+            {
+              "firstName": "Елена",
+              "lastName": "Андрианова",
+              "middleName": "Вилоровна",
+              "degree": "",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/500680",
+              "calendarId": "k559iff4rg9slu9ekgj9av4bl8@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.физики"
+              ],
+              "id": 500680,
+              "urlId": "e-andrianova",
+              "fio": "Андрианова Е. В."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+
+          ],
+          "lessonTime": "10:35-11:55",
+          "startLessonTime": "10:35",
+          "endLessonTime": "11:55",
+          "gradebookLesson": null,
+          "subject": "ФизК",
+          "note": null,
+          "lessonType": "ПЗ",
+          "employee": [
+
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "515-4 к."
+          ],
+          "lessonTime": "12:25-13:45",
+          "startLessonTime": "12:25",
+          "endLessonTime": "13:45",
+          "gradebookLesson": null,
+          "subject": "ИнЯз",
+          "note": "",
+          "lessonType": "ПЗ",
+          "employee": [
+            {
+              "firstName": "Яна",
+              "lastName": "Лях",
+              "middleName": "Викторовна",
+              "degree": "",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/524543",
+              "calendarId": "cja1p9o2fjfb8slu3cqn1pr6f8@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.МПК"
+              ],
+              "id": 524543,
+              "urlId": "ia-liakh",
+              "fio": "Лях Я. В."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "516-4 к."
+          ],
+          "lessonTime": "12:25-13:45",
+          "startLessonTime": "12:25",
+          "endLessonTime": "13:45",
+          "gradebookLesson": null,
+          "subject": "ИнЯз",
+          "note": "А2",
+          "lessonType": "ПЗ",
+          "employee": [
+            {
+              "firstName": "Виолетта",
+              "lastName": "Смолич",
+              "middleName": "Витальевна",
+              "degree": "м.п.н.",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/524523",
+              "calendarId": "lc7ivf6r2e8dcp7ms70id4s6ro@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.МПК"
+              ],
+              "id": 524523,
+              "urlId": "v-smolich",
+              "fio": "Смолич В. В."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "319-4 к."
+          ],
+          "lessonTime": "12:25-13:45",
+          "startLessonTime": "12:25",
+          "endLessonTime": "13:45",
+          "gradebookLesson": null,
+          "subject": "ИнЯз",
+          "note": "",
+          "lessonType": "ПЗ",
+          "employee": [
+            {
+              "firstName": "Людмила",
+              "lastName": "Синкевич",
+              "middleName": "Евгеньевна",
+              "degree": "",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/501044",
+              "calendarId": "rgslthhg29qnhop6lvv3e63ecc@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.МПК"
+              ],
+              "id": 501044,
+              "urlId": "l-sinkevich",
+              "fio": "Синкевич Л. Е."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            1,
+            3
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "209-4 к."
+          ],
+          "lessonTime": "14:00-15:20",
+          "startLessonTime": "14:00",
+          "endLessonTime": "15:20",
+          "gradebookLesson": null,
+          "subject": "ОАиП",
+          "note": null,
+          "lessonType": "ЛК",
+          "employee": [
+            {
+              "firstName": "Юлия",
+              "lastName": "Герман",
+              "middleName": "Олеговна",
+              "degree": "к.т.н.",
+              "rank": "доцент",
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/506004",
+              "calendarId": "p5megbl3bpn3do1vkl5moumops@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ПОИТ"
+              ],
+              "id": 506004,
+              "urlId": "iu-german",
+              "fio": "Герман Ю. О. (доцент)"
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            2,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "310-4 к."
+          ],
+          "lessonTime": "14:00-15:20",
+          "startLessonTime": "14:00",
+          "endLessonTime": "15:20",
+          "gradebookLesson": null,
+          "subject": "Физика",
+          "note": null,
+          "lessonType": "ЛК",
+          "employee": [
+            {
+              "firstName": "Ирина",
+              "lastName": "Дорошевич",
+              "middleName": "Леонидовна",
+              "degree": "к.ф.-м.н.",
+              "rank": "доцент",
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/500689",
+              "calendarId": "hcph3kqq6im8vsq5red9b3q44k@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.физики"
+              ],
+              "id": 500689,
+              "urlId": "i-doroshevich",
+              "fio": "Дорошевич И. Л. (доцент)"
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        }
+      ]
+    },
+    {
+      "weekDay": "Вторник",
+      "schedule": [
+        {
+          "weekNumber": [
+            1,
+            3
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 1,
+          "auditory": [
+            "213a-4 к."
+          ],
+          "lessonTime": "09:00-10:20",
+          "startLessonTime": "09:00",
+          "endLessonTime": "10:20",
+          "gradebookLesson": null,
+          "subject": "ЯП",
+          "note": null,
+          "lessonType": "ЛР",
+          "employee": [
+            {
+              "firstName": "Андрей",
+              "lastName": "Жиденко",
+              "middleName": "Леонидович",
+              "degree": "",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/532096",
+              "calendarId": "aifln5q2rqv02cvdm2tsd17jjo@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ПОИТ"
+              ],
+              "id": 532096,
+              "urlId": "a-zhidenko",
+              "fio": "Жиденко А. Л."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            1,
+            3
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "213a-4 к."
+          ],
+          "lessonTime": "10:35-11:55",
+          "startLessonTime": "10:35",
+          "endLessonTime": "11:55",
+          "gradebookLesson": null,
+          "subject": "ЯП",
+          "note": null,
+          "lessonType": "ЛР",
+          "employee": [
+            {
+              "firstName": "Андрей",
+              "lastName": "Жиденко",
+              "middleName": "Леонидович",
+              "degree": "",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/532096",
+              "calendarId": "aifln5q2rqv02cvdm2tsd17jjo@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ПОИТ"
+              ],
+              "id": 532096,
+              "urlId": "a-zhidenko",
+              "fio": "Жиденко А. Л."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            2,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "214-4 к."
+          ],
+          "lessonTime": "10:35-11:55",
+          "startLessonTime": "10:35",
+          "endLessonTime": "11:55",
+          "gradebookLesson": null,
+          "subject": "КЧ",
+          "note": null,
+          "lessonType": "ПЗ",
+          "employee": [
+            {
+              "firstName": "Галина",
+              "lastName": "Данилова",
+              "middleName": "Владимировна",
+              "degree": "м.т.н.",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/500579",
+              "calendarId": "5busnevj7cj5214q3m6qqim8f4@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ПОИТ"
+              ],
+              "id": 500579,
+              "urlId": "g-danilova",
+              "fio": "Данилова Г. В."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "106-4 к."
+          ],
+          "lessonTime": "12:25-13:45",
+          "startLessonTime": "12:25",
+          "endLessonTime": "13:45",
+          "gradebookLesson": null,
+          "subject": "Физика",
+          "note": null,
+          "lessonType": "ЛК",
+          "employee": [
+            {
+              "firstName": "Ирина",
+              "lastName": "Дорошевич",
+              "middleName": "Леонидовна",
+              "degree": "к.ф.-м.н.",
+              "rank": "доцент",
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/500689",
+              "calendarId": "hcph3kqq6im8vsq5red9b3q44k@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.физики"
+              ],
+              "id": 500689,
+              "urlId": "i-doroshevich",
+              "fio": "Дорошевич И. Л. (доцент)"
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            2,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "320-4 к."
+          ],
+          "lessonTime": "14:00-15:20",
+          "startLessonTime": "14:00",
+          "endLessonTime": "15:20",
+          "gradebookLesson": null,
+          "subject": "Матем",
+          "note": null,
+          "lessonType": "ПЗ",
+          "employee": [
+            {
+              "firstName": "Николай",
+              "lastName": "Рачковский",
+              "middleName": "Николаевич",
+              "degree": "к.ф.-м.н.",
+              "rank": "доцент",
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/524498",
+              "calendarId": "6qd14pdhjc9mtce9kvf97b53vc@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ВМ"
+              ],
+              "id": 524498,
+              "urlId": "n-rachkovskij",
+              "fio": "Рачковский Н. Н. (доцент)"
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        }
+      ]
+    },
+    {
+      "weekDay": "Среда",
+      "schedule": [
+        {
+          "weekNumber": [
+            1,
+            3
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 2,
+          "auditory": [
+            "207а-5 к."
+          ],
+          "lessonTime": "09:00-10:20",
+          "startLessonTime": "09:00",
+          "endLessonTime": "10:20",
+          "gradebookLesson": null,
+          "subject": "ЯП",
+          "note": null,
+          "lessonType": "ЛР",
+          "employee": [
+            {
+              "firstName": "Андрей",
+              "lastName": "Жиденко",
+              "middleName": "Леонидович",
+              "degree": "",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/532096",
+              "calendarId": "aifln5q2rqv02cvdm2tsd17jjo@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ПОИТ"
+              ],
+              "id": 532096,
+              "urlId": "a-zhidenko",
+              "fio": "Жиденко А. Л."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+
+          ],
+          "lessonTime": "10:35-11:55",
+          "startLessonTime": "10:35",
+          "endLessonTime": "11:55",
+          "gradebookLesson": null,
+          "subject": "ФизК",
+          "note": null,
+          "lessonType": "ПЗ",
+          "employee": [
+
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "514-5 к."
+          ],
+          "lessonTime": "12:25-13:45",
+          "startLessonTime": "12:25",
+          "endLessonTime": "13:45",
+          "gradebookLesson": null,
+          "subject": "Матем",
+          "note": null,
+          "lessonType": "ЛК",
+          "employee": [
+            {
+              "firstName": "Николай",
+              "lastName": "Рачковский",
+              "middleName": "Николаевич",
+              "degree": "к.ф.-м.н.",
+              "rank": "доцент",
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/524498",
+              "calendarId": "6qd14pdhjc9mtce9kvf97b53vc@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ВМ"
+              ],
+              "id": 524498,
+              "urlId": "n-rachkovskij",
+              "fio": "Рачковский Н. Н. (доцент)"
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "902-5 к."
+          ],
+          "lessonTime": "14:00-15:20",
+          "startLessonTime": "14:00",
+          "endLessonTime": "15:20",
+          "gradebookLesson": null,
+          "subject": "Матем",
+          "note": null,
+          "lessonType": "ПЗ",
+          "employee": [
+            {
+              "firstName": "Николай",
+              "lastName": "Рачковский",
+              "middleName": "Николаевич",
+              "degree": "к.ф.-м.н.",
+              "rank": "доцент",
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/524498",
+              "calendarId": "6qd14pdhjc9mtce9kvf97b53vc@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ВМ"
+              ],
+              "id": 524498,
+              "urlId": "n-rachkovskij",
+              "fio": "Рачковский Н. Н. (доцент)"
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            1,
+            3
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "321-4 к."
+          ],
+          "lessonTime": "15:50-17:10",
+          "startLessonTime": "15:50",
+          "endLessonTime": "17:10",
+          "gradebookLesson": null,
+          "subject": "КЧ",
+          "note": "17.03.2021 в ауд.418-4",
+          "lessonType": "ПЗ",
+          "employee": [
+            {
+              "firstName": "Галина",
+              "lastName": "Данилова",
+              "middleName": "Владимировна",
+              "degree": "м.т.н.",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/500579",
+              "calendarId": "5busnevj7cj5214q3m6qqim8f4@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ПОИТ"
+              ],
+              "id": 500579,
+              "urlId": "g-danilova",
+              "fio": "Данилова Г. В."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            2,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "102-3 к."
+          ],
+          "lessonTime": "15:50-17:10",
+          "startLessonTime": "15:50",
+          "endLessonTime": "17:10",
+          "gradebookLesson": null,
+          "subject": "ДМ",
+          "note": null,
+          "lessonType": "ПЗ",
+          "employee": [
+            {
+              "firstName": "Александр",
+              "lastName": "Лабоха",
+              "middleName": "Константинович",
+              "degree": "м.",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/525171",
+              "calendarId": "e8vi46l5aet8i44b877vf9ut5s@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ПОИТ"
+              ],
+              "id": 525171,
+              "urlId": "a-labokha",
+              "fio": "Лабоха А. К."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        }
+      ]
+    },
+    {
+      "weekDay": "Четверг",
+      "schedule": [
+        {
+          "weekNumber": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "409-5 к."
+          ],
+          "lessonTime": "09:00-10:20",
+          "startLessonTime": "09:00",
+          "endLessonTime": "10:20",
+          "gradebookLesson": null,
+          "subject": "ИнЯз",
+          "note": "",
+          "lessonType": "ПЗ",
+          "employee": [
+            {
+              "firstName": "Людмила",
+              "lastName": "Синкевич",
+              "middleName": "Евгеньевна",
+              "degree": "",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/501044",
+              "calendarId": "rgslthhg29qnhop6lvv3e63ecc@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.МПК"
+              ],
+              "id": 501044,
+              "urlId": "l-sinkevich",
+              "fio": "Синкевич Л. Е."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "514-4 к."
+          ],
+          "lessonTime": "09:00-10:20",
+          "startLessonTime": "09:00",
+          "endLessonTime": "10:20",
+          "gradebookLesson": null,
+          "subject": "ИнЯз",
+          "note": "",
+          "lessonType": "ПЗ",
+          "employee": [
+            {
+              "firstName": "Яна",
+              "lastName": "Лях",
+              "middleName": "Викторовна",
+              "degree": "",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/524543",
+              "calendarId": "cja1p9o2fjfb8slu3cqn1pr6f8@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.МПК"
+              ],
+              "id": 524543,
+              "urlId": "ia-liakh",
+              "fio": "Лях Я. В."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            1,
+            3
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "214-4 к."
+          ],
+          "lessonTime": "10:35-11:55",
+          "startLessonTime": "10:35",
+          "endLessonTime": "11:55",
+          "gradebookLesson": null,
+          "subject": "ДМ",
+          "note": null,
+          "lessonType": "ПЗ",
+          "employee": [
+            {
+              "firstName": "Александр",
+              "lastName": "Лабоха",
+              "middleName": "Константинович",
+              "degree": "м.",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/525171",
+              "calendarId": "e8vi46l5aet8i44b877vf9ut5s@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ПОИТ"
+              ],
+              "id": 525171,
+              "urlId": "a-labokha",
+              "fio": "Лабоха А. К."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            2,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "427-4 к."
+          ],
+          "lessonTime": "10:35-11:55",
+          "startLessonTime": "10:35",
+          "endLessonTime": "11:55",
+          "gradebookLesson": null,
+          "subject": "БелЯз КР",
+          "note": null,
+          "lessonType": "ПЗ",
+          "employee": [
+            {
+              "firstName": "Анастасия",
+              "lastName": "Албут",
+              "middleName": "Анатольевна",
+              "degree": "м.фил.н.",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/504676",
+              "calendarId": "6bp9j8jnesdspvpbant2mr3148@group.calendar.google.com",
+              "academicDepartment": [
+                "каф. общеобр.дисциплин"
+              ],
+              "id": 504676,
+              "urlId": "a-albut",
+              "fio": "Албут А. А."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "310-4 к."
+          ],
+          "lessonTime": "12:25-13:45",
+          "startLessonTime": "12:25",
+          "endLessonTime": "13:45",
+          "gradebookLesson": null,
+          "subject": "ДМ",
+          "note": null,
+          "lessonType": "ЛК",
+          "employee": [
+            {
+              "firstName": "Наталья",
+              "lastName": "Можей",
+              "middleName": "Павловна",
+              "degree": "к.ф.-м.н.",
+              "rank": "доцент",
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/505992",
+              "calendarId": "bkm441ntar9irl2js6uk6vedl4@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ПОИТ"
+              ],
+              "id": 505992,
+              "urlId": "n-mozhej",
+              "fio": "Можей Н. П. (доцент)"
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            1,
+            3
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "310-4 к."
+          ],
+          "lessonTime": "14:00-15:20",
+          "startLessonTime": "14:00",
+          "endLessonTime": "15:20",
+          "gradebookLesson": null,
+          "subject": "ЯП",
+          "note": null,
+          "lessonType": "ЛК",
+          "employee": [
+            {
+              "firstName": "Александр",
+              "lastName": "Шемаров",
+              "middleName": "Иванович",
+              "degree": "к.т.н.",
+              "rank": "доцент",
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/511957",
+              "calendarId": "dflblluec0tvvud2neepthrspg@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ЭВС"
+              ],
+              "id": 511957,
+              "urlId": "a-shemarov",
+              "fio": "Шемаров А. И. (доцент)"
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            2,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "310-4 к."
+          ],
+          "lessonTime": "14:00-15:20",
+          "startLessonTime": "14:00",
+          "endLessonTime": "15:20",
+          "gradebookLesson": null,
+          "subject": "Логика",
+          "note": null,
+          "lessonType": "ЛК",
+          "employee": [
+            {
+              "firstName": "Ирина",
+              "lastName": "Ратникова",
+              "middleName": "Михайловна",
+              "degree": "к.ф.н.",
+              "rank": "доцент",
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/500624",
+              "calendarId": "il97sv094fir7hjcb34l807i38@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.философии"
+              ],
+              "id": 500624,
+              "urlId": "i-ratnikova",
+              "fio": "Ратникова И. М. (доцент)"
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        }
+      ]
+    },
+    {
+      "weekDay": "Пятница",
+      "schedule": [
+        {
+          "weekNumber": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "514-5 к."
+          ],
+          "lessonTime": "09:00-10:20",
+          "startLessonTime": "09:00",
+          "endLessonTime": "10:20",
+          "gradebookLesson": null,
+          "subject": "ЯП",
+          "note": null,
+          "lessonType": "ЛК",
+          "employee": [
+            {
+              "firstName": "Александр",
+              "lastName": "Шемаров",
+              "middleName": "Иванович",
+              "degree": "к.т.н.",
+              "rank": "доцент",
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/511957",
+              "calendarId": "dflblluec0tvvud2neepthrspg@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ЭВС"
+              ],
+              "id": 511957,
+              "urlId": "a-shemarov",
+              "fio": "Шемаров А. И. (доцент)"
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            1,
+            3
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "312-4 к."
+          ],
+          "lessonTime": "10:35-11:55",
+          "startLessonTime": "10:35",
+          "endLessonTime": "11:55",
+          "gradebookLesson": null,
+          "subject": "Матем",
+          "note": null,
+          "lessonType": "ПЗ",
+          "employee": [
+            {
+              "firstName": "Николай",
+              "lastName": "Рачковский",
+              "middleName": "Николаевич",
+              "degree": "к.ф.-м.н.",
+              "rank": "доцент",
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/524498",
+              "calendarId": "6qd14pdhjc9mtce9kvf97b53vc@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ВМ"
+              ],
+              "id": 524498,
+              "urlId": "n-rachkovskij",
+              "fio": "Рачковский Н. Н. (доцент)"
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            2,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "514-5 к."
+          ],
+          "lessonTime": "10:35-11:55",
+          "startLessonTime": "10:35",
+          "endLessonTime": "11:55",
+          "gradebookLesson": null,
+          "subject": "Матем",
+          "note": null,
+          "lessonType": "ЛК",
+          "employee": [
+            {
+              "firstName": "Николай",
+              "lastName": "Рачковский",
+              "middleName": "Николаевич",
+              "degree": "к.ф.-м.н.",
+              "rank": "доцент",
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/524498",
+              "calendarId": "6qd14pdhjc9mtce9kvf97b53vc@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ВМ"
+              ],
+              "id": 524498,
+              "urlId": "n-rachkovskij",
+              "fio": "Рачковский Н. Н. (доцент)"
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            1,
+            3
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "210-4 к."
+          ],
+          "lessonTime": "12:25-13:45",
+          "startLessonTime": "12:25",
+          "endLessonTime": "13:45",
+          "gradebookLesson": null,
+          "subject": "ОАиП",
+          "note": null,
+          "lessonType": "ЛР",
+          "employee": [
+            {
+              "firstName": "Галина",
+              "lastName": "Данилова",
+              "middleName": "Владимировна",
+              "degree": "м.т.н.",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/500579",
+              "calendarId": "5busnevj7cj5214q3m6qqim8f4@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ПОИТ"
+              ],
+              "id": 500579,
+              "urlId": "g-danilova",
+              "fio": "Данилова Г. В."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            2,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "312-4 к."
+          ],
+          "lessonTime": "12:25-13:45",
+          "startLessonTime": "12:25",
+          "endLessonTime": "13:45",
+          "gradebookLesson": null,
+          "subject": "Логика",
+          "note": null,
+          "lessonType": "ПЗ",
+          "employee": [
+            {
+              "firstName": "Елена",
+              "lastName": "Лагунова",
+              "middleName": "Николаевна",
+              "degree": "",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/500618",
+              "calendarId": "8m44d23b1vth5o439nl331b3qk@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.философии"
+              ],
+              "id": 500618,
+              "urlId": "e-lagunova",
+              "fio": "Лагунова Е. Н."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            1,
+            3
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 1,
+          "auditory": [
+            "210-4 к."
+          ],
+          "lessonTime": "14:00-15:20",
+          "startLessonTime": "14:00",
+          "endLessonTime": "15:20",
+          "gradebookLesson": null,
+          "subject": "ОАиП",
+          "note": null,
+          "lessonType": "ЛР",
+          "employee": [
+            {
+              "firstName": "Галина",
+              "lastName": "Данилова",
+              "middleName": "Владимировна",
+              "degree": "м.т.н.",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/500579",
+              "calendarId": "5busnevj7cj5214q3m6qqim8f4@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ПОИТ"
+              ],
+              "id": 500579,
+              "urlId": "g-danilova",
+              "fio": "Данилова Г. В."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            2,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 2,
+          "auditory": [
+            "210-4 к."
+          ],
+          "lessonTime": "14:00-15:20",
+          "startLessonTime": "14:00",
+          "endLessonTime": "15:20",
+          "gradebookLesson": null,
+          "subject": "ОАиП",
+          "note": null,
+          "lessonType": "ЛР",
+          "employee": [
+            {
+              "firstName": "Галина",
+              "lastName": "Данилова",
+              "middleName": "Владимировна",
+              "degree": "м.т.н.",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/500579",
+              "calendarId": "5busnevj7cj5214q3m6qqim8f4@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ПОИТ"
+              ],
+              "id": 500579,
+              "urlId": "g-danilova",
+              "fio": "Данилова Г. В."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        }
+      ]
+    },
+    {
+      "weekDay": "Суббота",
+      "schedule": [
+        {
+          "weekNumber": [
+            2,
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "402-4 к."
+          ],
+          "lessonTime": "09:00-11:55",
+          "startLessonTime": "09:00",
+          "endLessonTime": "11:55",
+          "gradebookLesson": null,
+          "subject": "ИнЯз",
+          "note": "А2",
+          "lessonType": "ПЗ",
+          "employee": [
+            {
+              "firstName": "Виолетта",
+              "lastName": "Смолич",
+              "middleName": "Витальевна",
+              "degree": "м.п.н.",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/524523",
+              "calendarId": "lc7ivf6r2e8dcp7ms70id4s6ro@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.МПК"
+              ],
+              "id": 524523,
+              "urlId": "v-smolich",
+              "fio": "Смолич В. В."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            2
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 1,
+          "auditory": [
+            "507-4 к."
+          ],
+          "lessonTime": "12:25-15:20",
+          "startLessonTime": "12:25",
+          "endLessonTime": "15:20",
+          "gradebookLesson": null,
+          "subject": "Физика",
+          "note": null,
+          "lessonType": "ЛР",
+          "employee": [
+            {
+              "firstName": "Елена",
+              "lastName": "Андрианова",
+              "middleName": "Вилоровна",
+              "degree": "",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/500680",
+              "calendarId": "k559iff4rg9slu9ekgj9av4bl8@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.физики"
+              ],
+              "id": 500680,
+              "urlId": "e-andrianova",
+              "fio": "Андрианова Е. В."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+            4
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 2,
+          "auditory": [
+            "507-4 к."
+          ],
+          "lessonTime": "12:25-15:20",
+          "startLessonTime": "12:25",
+          "endLessonTime": "15:20",
+          "gradebookLesson": null,
+          "subject": "Физика",
+          "note": null,
+          "lessonType": "ЛР",
+          "employee": [
+            {
+              "firstName": "Елена",
+              "lastName": "Андрианова",
+              "middleName": "Вилоровна",
+              "degree": "",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/500680",
+              "calendarId": "k559iff4rg9slu9ekgj9av4bl8@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.физики"
+              ],
+              "id": 500680,
+              "urlId": "e-andrianova",
+              "fio": "Андрианова Е. В."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        }
+      ]
+    }
+  ],
+  "examSchedules": [
+    {
+      "weekDay": "11.06.2021",
+      "schedule": [
+        {
+          "weekNumber": [
+
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "213a-4 к."
+          ],
+          "lessonTime": "14:00-конс",
+          "startLessonTime": "14:00",
+          "endLessonTime": "15:00",
+          "gradebookLesson": null,
+          "subject": "ОАиП",
+          "note": null,
+          "lessonType": "Консультация",
+          "employee": [
+            {
+              "firstName": "Юлия",
+              "lastName": "Герман",
+              "middleName": "Олеговна",
+              "degree": "к.т.н.",
+              "rank": "доцент",
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/506004",
+              "calendarId": "p5megbl3bpn3do1vkl5moumops@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ПОИТ"
+              ],
+              "id": 506004,
+              "urlId": "iu-german",
+              "fio": "Герман Ю. О. (доцент)"
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        }
+      ]
+    },
+    {
+      "weekDay": "12.06.2021",
+      "schedule": [
+        {
+          "weekNumber": [
+
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "213a-4 к."
+          ],
+          "lessonTime": "09:00-14:00",
+          "startLessonTime": "09:00",
+          "endLessonTime": "14:00",
+          "gradebookLesson": null,
+          "subject": "ОАиП",
+          "note": null,
+          "lessonType": "Экзамен",
+          "employee": [
+            {
+              "firstName": "Юлия",
+              "lastName": "Герман",
+              "middleName": "Олеговна",
+              "degree": "к.т.н.",
+              "rank": "доцент",
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/506004",
+              "calendarId": "p5megbl3bpn3do1vkl5moumops@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ПОИТ"
+              ],
+              "id": 506004,
+              "urlId": "iu-german",
+              "fio": "Герман Ю. О. (доцент)"
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        }
+      ]
+    },
+    {
+      "weekDay": "16.06.2021",
+      "schedule": [
+        {
+          "weekNumber": [
+
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "419-4 к."
+          ],
+          "lessonTime": "15:00-конс",
+          "startLessonTime": "15:00",
+          "endLessonTime": "16:00",
+          "gradebookLesson": null,
+          "subject": "ИнЯз",
+          "note": null,
+          "lessonType": "Консультация",
+          "employee": [
+            {
+              "firstName": "Анна",
+              "lastName": "Рогачевская",
+              "middleName": "Ивановна",
+              "degree": "",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/501043",
+              "calendarId": "liglviisf86inutitn5j60n6rs@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.МПК"
+              ],
+              "id": 501043,
+              "urlId": "a-rogachevskaia",
+              "fio": "Рогачевская А. И."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "419-4 к."
+          ],
+          "lessonTime": "16:00-конс",
+          "startLessonTime": "16:00",
+          "endLessonTime": "17:00",
+          "gradebookLesson": null,
+          "subject": "ИнЯз",
+          "note": null,
+          "lessonType": "Консультация",
+          "employee": [
+            {
+              "firstName": "Людмила",
+              "lastName": "Синкевич",
+              "middleName": "Евгеньевна",
+              "degree": "",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/501044",
+              "calendarId": "rgslthhg29qnhop6lvv3e63ecc@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.МПК"
+              ],
+              "id": 501044,
+              "urlId": "l-sinkevich",
+              "fio": "Синкевич Л. Е."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        }
+      ]
+    },
+    {
+      "weekDay": "17.06.2021",
+      "schedule": [
+        {
+          "weekNumber": [
+
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "419-4 к."
+          ],
+          "lessonTime": "09:00-12:00",
+          "startLessonTime": "09:00",
+          "endLessonTime": "12:00",
+          "gradebookLesson": null,
+          "subject": "ИнЯз",
+          "note": null,
+          "lessonType": "Экзамен",
+          "employee": [
+            {
+              "firstName": "Анна",
+              "lastName": "Рогачевская",
+              "middleName": "Ивановна",
+              "degree": "",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/501043",
+              "calendarId": "liglviisf86inutitn5j60n6rs@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.МПК"
+              ],
+              "id": 501043,
+              "urlId": "a-rogachevskaia",
+              "fio": "Рогачевская А. И."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        },
+        {
+          "weekNumber": [
+
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "418-4 к."
+          ],
+          "lessonTime": "09:00-12:00",
+          "startLessonTime": "09:00",
+          "endLessonTime": "12:00",
+          "gradebookLesson": null,
+          "subject": "ИнЯз",
+          "note": null,
+          "lessonType": "Экзамен",
+          "employee": [
+            {
+              "firstName": "Людмила",
+              "lastName": "Синкевич",
+              "middleName": "Евгеньевна",
+              "degree": "",
+              "rank": null,
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/501044",
+              "calendarId": "rgslthhg29qnhop6lvv3e63ecc@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.МПК"
+              ],
+              "id": 501044,
+              "urlId": "l-sinkevich",
+              "fio": "Синкевич Л. Е."
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        }
+      ]
+    },
+    {
+      "weekDay": "19.06.2021",
+      "schedule": [
+        {
+          "weekNumber": [
+
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "310-4 к."
+          ],
+          "lessonTime": "15:00-конс",
+          "startLessonTime": "15:00",
+          "endLessonTime": "16:00",
+          "gradebookLesson": null,
+          "subject": "Матем",
+          "note": null,
+          "lessonType": "Консультация",
+          "employee": [
+            {
+              "firstName": "Николай",
+              "lastName": "Рачковский",
+              "middleName": "Николаевич",
+              "degree": "к.ф.-м.н.",
+              "rank": "доцент",
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/524498",
+              "calendarId": "6qd14pdhjc9mtce9kvf97b53vc@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ВМ"
+              ],
+              "id": 524498,
+              "urlId": "n-rachkovskij",
+              "fio": "Рачковский Н. Н. (доцент)"
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        }
+      ]
+    },
+    {
+      "weekDay": "21.06.2021",
+      "schedule": [
+        {
+          "weekNumber": [
+
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "310-4 к."
+          ],
+          "lessonTime": "09:00-14:00",
+          "startLessonTime": "09:00",
+          "endLessonTime": "14:00",
+          "gradebookLesson": null,
+          "subject": "Матем",
+          "note": null,
+          "lessonType": "Экзамен",
+          "employee": [
+            {
+              "firstName": "Николай",
+              "lastName": "Рачковский",
+              "middleName": "Николаевич",
+              "degree": "к.ф.-м.н.",
+              "rank": "доцент",
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/524498",
+              "calendarId": "6qd14pdhjc9mtce9kvf97b53vc@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ВМ"
+              ],
+              "id": 524498,
+              "urlId": "n-rachkovskij",
+              "fio": "Рачковский Н. Н. (доцент)"
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        }
+      ]
+    },
+    {
+      "weekDay": "24.06.2021",
+      "schedule": [
+        {
+          "weekNumber": [
+
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "214-4 к."
+          ],
+          "lessonTime": "15:00-конс",
+          "startLessonTime": "15:00",
+          "endLessonTime": "16:00",
+          "gradebookLesson": null,
+          "subject": "ДМ",
+          "note": null,
+          "lessonType": "Консультация",
+          "employee": [
+            {
+              "firstName": "Наталья",
+              "lastName": "Можей",
+              "middleName": "Павловна",
+              "degree": "к.ф.-м.н.",
+              "rank": "доцент",
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/505992",
+              "calendarId": "bkm441ntar9irl2js6uk6vedl4@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ПОИТ"
+              ],
+              "id": 505992,
+              "urlId": "n-mozhej",
+              "fio": "Можей Н. П. (доцент)"
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        }
+      ]
+    },
+    {
+      "weekDay": "25.06.2021",
+      "schedule": [
+        {
+          "weekNumber": [
+
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "214-4 к."
+          ],
+          "lessonTime": "16:00-22:00",
+          "startLessonTime": "16:00",
+          "endLessonTime": "22:00",
+          "gradebookLesson": null,
+          "subject": "ДМ",
+          "note": null,
+          "lessonType": "Экзамен",
+          "employee": [
+            {
+              "firstName": "Наталья",
+              "lastName": "Можей",
+              "middleName": "Павловна",
+              "degree": "к.ф.-м.н.",
+              "rank": "доцент",
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/505992",
+              "calendarId": "bkm441ntar9irl2js6uk6vedl4@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.ПОИТ"
+              ],
+              "id": 505992,
+              "urlId": "n-mozhej",
+              "fio": "Можей Н. П. (доцент)"
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        }
+      ]
+    },
+    {
+      "weekDay": "28.06.2021",
+      "schedule": [
+        {
+          "weekNumber": [
+
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "506-4 к."
+          ],
+          "lessonTime": "15:00-конс",
+          "startLessonTime": "15:00",
+          "endLessonTime": "16:00",
+          "gradebookLesson": null,
+          "subject": "Физика",
+          "note": null,
+          "lessonType": "Консультация",
+          "employee": [
+            {
+              "firstName": "Ирина",
+              "lastName": "Дорошевич",
+              "middleName": "Леонидовна",
+              "degree": "к.ф.-м.н.",
+              "rank": "доцент",
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/500689",
+              "calendarId": "hcph3kqq6im8vsq5red9b3q44k@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.физики"
+              ],
+              "id": 500689,
+              "urlId": "i-doroshevich",
+              "fio": "Дорошевич И. Л. (доцент)"
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        }
+      ]
+    },
+    {
+      "weekDay": "29.06.2021",
+      "schedule": [
+        {
+          "weekNumber": [
+
+          ],
+          "studentGroup": [
+            "051007"
+          ],
+          "studentGroupInformation": [
+            "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+          ],
+          "numSubgroup": 0,
+          "auditory": [
+            "506-4 к."
+          ],
+          "lessonTime": "09:00-14:00",
+          "startLessonTime": "09:00",
+          "endLessonTime": "14:00",
+          "gradebookLesson": null,
+          "subject": "Физика",
+          "note": null,
+          "lessonType": "Экзамен",
+          "employee": [
+            {
+              "firstName": "Ирина",
+              "lastName": "Дорошевич",
+              "middleName": "Леонидовна",
+              "degree": "к.ф.-м.н.",
+              "rank": "доцент",
+              "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/500689",
+              "calendarId": "hcph3kqq6im8vsq5red9b3q44k@group.calendar.google.com",
+              "academicDepartment": [
+                "каф.физики"
+              ],
+              "id": 500689,
+              "urlId": "i-doroshevich",
+              "fio": "Дорошевич И. Л. (доцент)"
+            }
+          ],
+          "studentGroupModelList": null,
+          "zaoch": false,
+          "gradebookLessonlist": null
+        }
+      ]
+    }
+  ],
+  "todayDate": "09.05.2021",
+  "todaySchedules": [
+
+  ],
+  "tomorrowDate": "10.05.2021",
+  "tomorrowSchedules": [
+    {
+      "weekNumber": [
+        1
+      ],
+      "studentGroup": [
+        "051007"
+      ],
+      "studentGroupInformation": [
+        "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+      ],
+      "numSubgroup": 0,
+      "auditory": [
+
+      ],
+      "lessonTime": "10:35-11:55",
+      "startLessonTime": "10:35",
+      "endLessonTime": "11:55",
+      "gradebookLesson": null,
+      "subject": "ФизК",
+      "note": null,
+      "lessonType": "ПЗ",
+      "employee": [
+
+      ],
+      "studentGroupModelList": null,
+      "zaoch": false,
+      "gradebookLessonlist": null
+    },
+    {
+      "weekNumber": [
+        1
+      ],
+      "studentGroup": [
+        "051007"
+      ],
+      "studentGroupInformation": [
+        "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+      ],
+      "numSubgroup": 0,
+      "auditory": [
+        "516-4 к."
+      ],
+      "lessonTime": "12:25-13:45",
+      "startLessonTime": "12:25",
+      "endLessonTime": "13:45",
+      "gradebookLesson": null,
+      "subject": "ИнЯз",
+      "note": "А2",
+      "lessonType": "ПЗ",
+      "employee": [
+        {
+          "firstName": "Виолетта",
+          "lastName": "Смолич",
+          "middleName": "Витальевна",
+          "degree": "м.п.н.",
+          "rank": null,
+          "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/524523",
+          "calendarId": "lc7ivf6r2e8dcp7ms70id4s6ro@group.calendar.google.com",
+          "academicDepartment": [
+            "каф.МПК"
+          ],
+          "id": 524523,
+          "urlId": "v-smolich",
+          "fio": "Смолич В. В."
+        }
+      ],
+      "studentGroupModelList": null,
+      "zaoch": false,
+      "gradebookLessonlist": null
+    },
+    {
+      "weekNumber": [
+        1
+      ],
+      "studentGroup": [
+        "051007"
+      ],
+      "studentGroupInformation": [
+        "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+      ],
+      "numSubgroup": 0,
+      "auditory": [
+        "515-4 к."
+      ],
+      "lessonTime": "12:25-13:45",
+      "startLessonTime": "12:25",
+      "endLessonTime": "13:45",
+      "gradebookLesson": null,
+      "subject": "ИнЯз",
+      "note": "",
+      "lessonType": "ПЗ",
+      "employee": [
+        {
+          "firstName": "Яна",
+          "lastName": "Лях",
+          "middleName": "Викторовна",
+          "degree": "",
+          "rank": null,
+          "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/524543",
+          "calendarId": "cja1p9o2fjfb8slu3cqn1pr6f8@group.calendar.google.com",
+          "academicDepartment": [
+            "каф.МПК"
+          ],
+          "id": 524543,
+          "urlId": "ia-liakh",
+          "fio": "Лях Я. В."
+        }
+      ],
+      "studentGroupModelList": null,
+      "zaoch": false,
+      "gradebookLessonlist": null
+    },
+    {
+      "weekNumber": [
+        1
+      ],
+      "studentGroup": [
+        "051007"
+      ],
+      "studentGroupInformation": [
+        "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+      ],
+      "numSubgroup": 0,
+      "auditory": [
+        "319-4 к."
+      ],
+      "lessonTime": "12:25-13:45",
+      "startLessonTime": "12:25",
+      "endLessonTime": "13:45",
+      "gradebookLesson": null,
+      "subject": "ИнЯз",
+      "note": "",
+      "lessonType": "ПЗ",
+      "employee": [
+        {
+          "firstName": "Людмила",
+          "lastName": "Синкевич",
+          "middleName": "Евгеньевна",
+          "degree": "",
+          "rank": null,
+          "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/501044",
+          "calendarId": "rgslthhg29qnhop6lvv3e63ecc@group.calendar.google.com",
+          "academicDepartment": [
+            "каф.МПК"
+          ],
+          "id": 501044,
+          "urlId": "l-sinkevich",
+          "fio": "Синкевич Л. Е."
+        }
+      ],
+      "studentGroupModelList": null,
+      "zaoch": false,
+      "gradebookLessonlist": null
+    },
+    {
+      "weekNumber": [
+        1
+      ],
+      "studentGroup": [
+        "051007"
+      ],
+      "studentGroupInformation": [
+        "051007#27#1-40 01 01 Программное обеспечение информационных технологий"
+      ],
+      "numSubgroup": 0,
+      "auditory": [
+        "209-4 к."
+      ],
+      "lessonTime": "14:00-15:20",
+      "startLessonTime": "14:00",
+      "endLessonTime": "15:20",
+      "gradebookLesson": null,
+      "subject": "ОАиП",
+      "note": null,
+      "lessonType": "ЛК",
+      "employee": [
+        {
+          "firstName": "Юлия",
+          "lastName": "Герман",
+          "middleName": "Олеговна",
+          "degree": "к.т.н.",
+          "rank": "доцент",
+          "photoLink": "https://journal.bsuir.by/api/v1/portal/employees/photo/506004",
+          "calendarId": "p5megbl3bpn3do1vkl5moumops@group.calendar.google.com",
+          "academicDepartment": [
+            "каф.ПОИТ"
+          ],
+          "id": 506004,
+          "urlId": "iu-german",
+          "fio": "Герман Ю. О. (доцент)"
+        }
+      ],
+      "studentGroupModelList": null,
+      "zaoch": false,
+      "gradebookLessonlist": null
+    }
+  ],
+  "currentWeekNumber": 4,
+  "dateStart": "09.02.2021",
+  "dateEnd": "07.06.2021",
+  "sessionStart": null,
+  "sessionEnd": null
+}

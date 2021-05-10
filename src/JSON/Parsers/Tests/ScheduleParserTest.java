@@ -26,7 +26,7 @@ import java.util.ArrayList;
  */
 class ScheduleParserTest {
 
-    private static final String FILE_WITH_JSON_PATH = "src\\JSON\\Parsers\\Tests\\JSON.txt";
+    private static final String FILE_WITH_JSON_PATH = "src\\JSON\\Parsers\\Tests\\scheduleJSON.txt";
     private static final int WEEKDAYS_AMOUNT = 7;
     private static final int SATURDAY_INDEX = 6;
     private static final int MONDAY_PAIRS_AMOUNT = 7;
@@ -38,7 +38,7 @@ class ScheduleParserTest {
     @BeforeAll
     static void getSchedule() {
         String jsonData = readJSONFromFile();
-        ScheduleParser parser = new JSONParser(new JSONObject(jsonData));
+        ScheduleParser parser = new JSONParser(jsonData);
         scheduleList = parser.parseSchedule();
         todayDate = parser.parseTodayDate();
     }

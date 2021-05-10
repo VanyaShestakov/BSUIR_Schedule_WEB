@@ -30,11 +30,11 @@ public class JSONParser implements ScheduleParser, TeachersParser {
     private static final String ID = "id";
     private static final String FIO = "fio";
 
-    private final JSONObject jsonObject;
+    private final String jsonString;
    // private JSONArray jsonArray;
 
-    public JSONParser(JSONObject jsonObject) {
-        this.jsonObject = jsonObject;
+    public JSONParser(String jsonString) {
+        this.jsonString = jsonString;
     }
 
     /**
@@ -43,6 +43,7 @@ public class JSONParser implements ScheduleParser, TeachersParser {
      * @return {@code ArrayList<ArrayList<BSUIRLesson>>}
      */
     public ArrayList<ArrayList<BSUIRLesson>> parseSchedule() {
+        JSONObject jsonObject = new JSONObject(jsonString);
         ArrayList<ArrayList<BSUIRLesson>> weekDays = new ArrayList<>(7);
         for (int currDay = 0; currDay < 7 /*jsonObject.getJSONArray(SCHEDULES).length()*/; currDay++) {
             int pairsAmount;
@@ -56,13 +57,13 @@ public class JSONParser implements ScheduleParser, TeachersParser {
 
             ArrayList<BSUIRLesson> currPairs = new ArrayList<>();
             for (int currPair = 0; currPair < pairsAmount; currPair++) {
-                String subjectName = getSubjectName(currDay, currPair);
-                String time = getTime(currDay, currPair);
-                String type = getType(currDay, currPair);
-                String weekDay = getWeekday(currDay);
-                String auditory = getAuditory(currDay, currPair);
-                HashSet<Integer> weeks = getWeeks(currDay, currPair);
-                int subGroup = getSubGroup(currDay, currPair);
+                String subjectName = getSubjectName(currDay, currPair, jsonObject);
+                String time = getTime(currDay, currPair, jsonObject);
+                String type = getType(currDay, currPair, jsonObject);
+                String weekDay = getWeekday(currDay, jsonObject);
+                String auditory = getAuditory(currDay, currPair, jsonObject);
+                HashSet<Integer> weeks = getWeeks(currDay, currPair, jsonObject);
+                int subGroup = getSubGroup(currDay, currPair, jsonObject);
 
                 String firstName = getTeacherFirstName(currDay, currPair);
                 String lastName = getTeacherLastName(currDay, currPair);
@@ -81,11 +82,11 @@ public class JSONParser implements ScheduleParser, TeachersParser {
     }
 
     public String parseTodayDate() {
-        return jsonObject.getString("todayDate");
+        return new JSONObject(jsonString).getString("todayDate");
     }
 
     public ArrayList<BSUIRTeacher> parseTeachers() {
-        JSONArray jsonArray = new JSONArray(this.jsonObject);
+        JSONArray jsonArray = new JSONArray(jsonString);
         ArrayList<BSUIRTeacher> teachers = new ArrayList<>();
         for (int i = 0; i < jsonArray.length(); i++) {
             String firstName = getTeacherFirstName(jsonArray.getJSONObject(i));
@@ -132,7 +133,7 @@ public class JSONParser implements ScheduleParser, TeachersParser {
         return obj.getString(FIO);
     }
 
-    private String getSubjectName(int currDay, int currPair) {
+    private String getSubjectName(int currDay, int currPair, JSONObject jsonObject) {
         return  jsonObject.
                 getJSONArray(SCHEDULES).
                 getJSONObject(currDay).
@@ -141,7 +142,7 @@ public class JSONParser implements ScheduleParser, TeachersParser {
                 getString(SUBJECT);
     }
 
-    private String getTime(int currDay, int currPair) {
+    private String getTime(int currDay, int currPair, JSONObject jsonObject) {
         return  jsonObject.
                 getJSONArray(SCHEDULES).
                 getJSONObject(currDay).
@@ -150,7 +151,7 @@ public class JSONParser implements ScheduleParser, TeachersParser {
                 getString(LESSON_TIME);
     }
 
-    private String getType(int currDay, int currPair) {
+    private String getType(int currDay, int currPair, JSONObject jsonObject) {
         return  jsonObject.
                 getJSONArray(SCHEDULES).
                 getJSONObject(currDay).
@@ -159,14 +160,14 @@ public class JSONParser implements ScheduleParser, TeachersParser {
                 getString(LESSON_TYPE);
     }
 
-    private String getWeekday(int currDay) {
+    private String getWeekday(int currDay, JSONObject jsonObject) {
         return  jsonObject.
                 getJSONArray(SCHEDULES).
                 getJSONObject(currDay).
                 getString(WEEKDAY);
     }
 
-    private String getAuditory(int currDay, int currPair) {
+    private String getAuditory(int currDay, int currPair, JSONObject jsonObject) {
         try {
             return  jsonObject.
                     getJSONArray(SCHEDULES).
@@ -180,7 +181,7 @@ public class JSONParser implements ScheduleParser, TeachersParser {
         }
     }
 
-    private HashSet<Integer> getWeeks(int currDay, int currPair) {
+    private HashSet<Integer> getWeeks(int currDay, int currPair, JSONObject jsonObject) {
         JSONArray weeksJSON = jsonObject.
                 getJSONArray(SCHEDULES).
                 getJSONObject(currDay).
@@ -194,7 +195,7 @@ public class JSONParser implements ScheduleParser, TeachersParser {
         return weeks;
     }
 
-    private int getSubGroup(int currDay, int currPair) {
+    private int getSubGroup(int currDay, int currPair, JSONObject jsonObject) {
         return  jsonObject.
                 getJSONArray(SCHEDULES).
                 getJSONObject(currDay).
@@ -260,7 +261,7 @@ public class JSONParser implements ScheduleParser, TeachersParser {
     }
 
     private JSONObject getTeacherObj(int currDay, int currPair) {
-        return  jsonObject.
+        return  new JSONObject(jsonString).
                 getJSONArray(SCHEDULES).
                 getJSONObject(currDay).
                 getJSONArray(SCHEDULE).

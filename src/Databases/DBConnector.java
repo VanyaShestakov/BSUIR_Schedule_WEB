@@ -99,8 +99,7 @@ public class DBConnector {
 
     private ArrayList<BSUIRTeacher> getTeachersArr() {
         JSONRequester teachersRequester = new JSONRequester();
-        JSONObject object = new JSONObject(teachersRequester.getTeachers());
-        TeachersParser teachersParser = new JSONParser(object);
+        TeachersParser teachersParser = new JSONParser(teachersRequester.getTeachers());
         return teachersParser.parseTeachers();
     }
 }

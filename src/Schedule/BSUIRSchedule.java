@@ -28,7 +28,7 @@ public class BSUIRSchedule {
     public BSUIRSchedule(String groupNumber) {
         JSONRequester requester = new JSONRequester();
         String jsonData = requester.getGroupSchedule(groupNumber);
-        ScheduleParser parser = new JSONParser( new JSONObject(jsonData));
+        ScheduleParser parser = new JSONParser(jsonData);
         this.currentWeek = requester.getCurrentWeek();
         this.scheduleList = parser.parseSchedule();
         this.groupNumber = groupNumber;

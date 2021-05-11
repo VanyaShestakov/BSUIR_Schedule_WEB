@@ -1,4 +1,5 @@
 package Controller;
+import Databases.DBConnector;
 import HTML.HTMLWriter;
 import Schedule.BSUIRSchedule;
 import jakarta.servlet.*;

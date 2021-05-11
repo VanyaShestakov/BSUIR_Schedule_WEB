@@ -46,29 +46,38 @@ public class DBConnector {
                         "INSERT INTO teachers_info " +
                         "(id, first_name, last_name, middle_name, `rank`, photo_link, fio) " +
                         "VALUES " + data);
+                statement.close();
             }
             statement.executeBatch();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-/*
+
     public void updateGroupsTable() {
         ArrayList<BSUIRGroup> groups = getGroupsList();
+        String course;
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
             Statement statement = connection.createStatement();
             statement.addBatch("TRUNCATE TABLE groups_table");
             for (BSUIRGroup group: groups) {
-                String data = "()";
+                course = group.getCourse() == -1 ? "null" : String.valueOf(group.getCourse());
+                String data = "(" +
+                        group.getId() + ", '" +
+                        group.getName() + "', " +
+                        course +
+                        ")";
                 statement.addBatch("" +
                         "INSERT INTO groups_table " +
                         "(id, name, course)" +
                         "VALUES " + data);
             }
+            statement.executeBatch();
+            statement.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }*/
+    }
 
     public ArrayList<BSUIRTeacher> getTeachers() {
         ArrayList<BSUIRTeacher> teachers = new ArrayList<>();
@@ -85,6 +94,7 @@ public class DBConnector {
                         resultSet.getInt("id"),
                         resultSet.getString("fio")));
             }
+            statement.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -110,6 +120,7 @@ public class DBConnector {
                         resultSet.getInt("id"),
                         resultSet.getString("fio")));
             }
+            statement.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }

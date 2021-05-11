@@ -1,5 +1,7 @@
 package Schedule;
 
+import java.util.Optional;
+
 public class BSUIRGroup {
     private int id;
     private String name;

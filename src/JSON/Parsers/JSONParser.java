@@ -10,6 +10,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Optional;
 
 public class JSONParser implements ScheduleParser, TeachersParser, GroupsParser {
     private static final String SCHEDULES = "schedules";
@@ -127,7 +128,7 @@ public class JSONParser implements ScheduleParser, TeachersParser, GroupsParser 
     }
 
     private int getGroupCourse(JSONObject obj) {
-        return obj.getInt(COURSE);
+        return obj.optInt(COURSE, -1);
     }
 
     private String getTeacherFirstName(JSONObject obj) {

@@ -1,6 +1,7 @@
 package JSON.Parsers;
 
 
+import Schedule.BSUIRGroup;
 import Schedule.BSUIRLesson;
 import Schedule.BSUIRTeacher;
 import org.json.JSONArray;
@@ -10,7 +11,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class JSONParser implements ScheduleParser, TeachersParser {
+public class JSONParser implements ScheduleParser, TeachersParser, GroupsParser {
     private static final String SCHEDULES = "schedules";
     private static final String WEEKDAY = "weekDay";
     private static final String SCHEDULE = "schedule";
@@ -29,6 +30,10 @@ public class JSONParser implements ScheduleParser, TeachersParser {
     private static final String PHOTO_LINK = "photoLink";
     private static final String ID = "id";
     private static final String FIO = "fio";
+
+    private static final String GROUP_NAME = "name";
+    private static final String COURSE = "course";
+
 
     private final String jsonString;
    // private JSONArray jsonArray;
@@ -99,6 +104,30 @@ public class JSONParser implements ScheduleParser, TeachersParser {
             teachers.add(new BSUIRTeacher(firstName, lastName, middleName, rank, photoLink, id, fio));
         }
         return teachers;
+    }
+
+    public ArrayList<BSUIRGroup> parseGroups() {
+        JSONArray jsonArray = new JSONArray(jsonString);
+        ArrayList<BSUIRGroup> groups = new ArrayList<>();
+        for (int i = 0; i < jsonArray.length(); i++) {
+            int id = getGroupID(jsonArray.getJSONObject(i));
+            String name = getGroupName(jsonArray.getJSONObject(i));
+            int course = getGroupCourse(jsonArray.getJSONObject(i));
+            groups.add(new BSUIRGroup(id, name, course));
+        }
+        return groups;
+    }
+
+    private int getGroupID(JSONObject obj) {
+        return obj.getInt(ID);
+    }
+
+    private String getGroupName(JSONObject obj) {
+        return obj.getString(GROUP_NAME);
+    }
+
+    private int getGroupCourse(JSONObject obj) {
+        return obj.getInt(COURSE);
     }
 
     private String getTeacherFirstName(JSONObject obj) {
@@ -269,5 +298,7 @@ public class JSONParser implements ScheduleParser, TeachersParser {
                 getJSONArray(EMPLOYEE).
                 getJSONObject(0);
     }
+
+
 
 }

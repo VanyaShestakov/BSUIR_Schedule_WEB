@@ -1,8 +1,10 @@
 package Databases;
 
+import JSON.Parsers.GroupsParser;
 import JSON.Parsers.JSONParser;
 import JSON.JSONRequester;
 import JSON.Parsers.TeachersParser;
+import Schedule.BSUIRGroup;
 import Schedule.BSUIRTeacher;
 import com.mysql.cj.jdbc.Driver;
 import org.json.JSONObject;
@@ -27,7 +29,7 @@ public class DBConnector {
     }
 
     public void updateTeachersInfoTable() {
-        ArrayList<BSUIRTeacher> teachers = getTeachersArr();
+        ArrayList<BSUIRTeacher> teachers = getTeachersList();
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
             Statement statement = connection.createStatement();
             statement.addBatch("TRUNCATE TABLE teachers_info");
@@ -50,8 +52,25 @@ public class DBConnector {
             e.printStackTrace();
         }
     }
+/*
+    public void updateGroupsTable() {
+        ArrayList<BSUIRGroup> groups = getGroupsList();
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+            Statement statement = connection.createStatement();
+            statement.addBatch("TRUNCATE TABLE groups_table");
+            for (BSUIRGroup group: groups) {
+                String data = "()";
+                statement.addBatch("" +
+                        "INSERT INTO groups_table " +
+                        "(id, name, course)" +
+                        "VALUES " + data);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }*/
 
-    public ArrayList<BSUIRTeacher> getTeachersFromDB() {
+    public ArrayList<BSUIRTeacher> getTeachers() {
         ArrayList<BSUIRTeacher> teachers = new ArrayList<>();
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
             Statement statement = connection.createStatement();
@@ -97,9 +116,17 @@ public class DBConnector {
         return teachers;
     }
 
-    private ArrayList<BSUIRTeacher> getTeachersArr() {
-        JSONRequester teachersRequester = new JSONRequester();
-        TeachersParser teachersParser = new JSONParser(teachersRequester.getTeachers());
-        return teachersParser.parseTeachers();
+    private ArrayList<BSUIRTeacher> getTeachersList() {
+        JSONRequester requester = new JSONRequester();
+        TeachersParser parser = new JSONParser(requester.getTeachers());
+        return parser.parseTeachers();
     }
+
+    private ArrayList<BSUIRGroup> getGroupsList() {
+        JSONRequester requester = new JSONRequester();
+        GroupsParser parser = new JSONParser(requester.getGroups());
+        return parser.parseGroups();
+    }
+
+
 }

@@ -41,6 +41,6 @@ public class TeachersInfoServlet extends HttpServlet {
     private String getAllTeachers() {
         HTMLWriter writer = new HTMLWriter();
         DBConnector connector = new DBConnector();
-        return writer.getTeachersInfo(connector.getTeachersFromDB());
+        return writer.getTeachersInfo(connector.getTeachers());
     }
 }

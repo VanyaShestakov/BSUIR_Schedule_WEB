@@ -56,7 +56,7 @@ public class HTMLWriter {
                             String subGroup = String.valueOf(currLesson.getSubGroup());
                             subGroup = subGroup.equals("0") ? "Вся группа" : subGroup;
                             sb.append("<div style=\"border:" + borderStyle + "\" class=\"lesson_container\">\n" +
-                                    "<img class=\"teacher_photo\" src=\"" + currLesson.getTeacher().getPhotoLink() + "\">" +
+                                    "<img alt=\"Фото\" class=\"teacher_photo\" src=\"" + currLesson.getTeacher().getPhotoLink() + "\">" +
                                     "<div class=\"lesson_info\">" +
                                     "<h2>" + currLesson.getSubjectName() + "  (" +
                                     currLesson.getType() + ")    " + currLesson.getTime() + "</h2>" +

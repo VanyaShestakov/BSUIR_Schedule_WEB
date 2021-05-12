@@ -79,6 +79,23 @@ public class DBConnector {
         }
     }
 
+    public boolean containsGroup(String groupNumber) {
+        boolean res = false;
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+            Statement statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery("SELECT * FROM groups_table WHERE name='" + groupNumber + "'");
+            int amount = 0;
+            while (rs.next()) {
+                amount++;
+            }
+            System.out.println(amount);
+            res = amount == 1;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return res;
+    }
+
     public ArrayList<BSUIRTeacher> getTeachers() {
         ArrayList<BSUIRTeacher> teachers = new ArrayList<>();
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {

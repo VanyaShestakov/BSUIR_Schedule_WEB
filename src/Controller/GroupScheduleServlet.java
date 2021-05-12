@@ -20,7 +20,8 @@ public class GroupScheduleServlet extends HttpServlet {
                 .filter(cookie -> cookie.getName().equals("groupNumber"))
                 .count() != 1;
         if (!isEmptyCookies) {
-            forwardGroupSchedulePage(request, response, getGroupNumberFromCookies(request));
+            setScheduleAttr(request, getGroupNumberFromCookies(request));
+            forwardGroupSchedulePage(request, response);
         } else {
             String path = "/Pages/groupSchedule.jsp";
             ServletContext context = getServletContext();
@@ -31,23 +32,25 @@ public class GroupScheduleServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.addCookie(new Cookie("groupNumber", request.getParameter("groupNumber")));
-        forwardGroupSchedulePage(request, response, request.getParameter("groupNumber"));
+        String groupNumber = request.getParameter("groupNumber");
+        DBConnector groupsTableConnector = new DBConnector();
+        if (groupsTableConnector.containsGroup(groupNumber.trim())) {
+            response.addCookie(new Cookie("groupNumber", request.getParameter("groupNumber")));
+            setScheduleAttr(request, groupNumber);
+            forwardGroupSchedulePage(request, response);
+        } else {
+            request.setAttribute("alert","" +
+                    "<script language=\"JavaScript\"> "+
+                    "alert(\"Ошибка. Запрашиваемая Вами группа не найдена!\"); " +
+                    "</script>");
+            forwardGroupSchedulePage(request, response);
+        }
     }
 
-    private void forwardGroupSchedulePage(HttpServletRequest request, HttpServletResponse response, String groupNumber) throws ServletException, IOException {
+    private void forwardGroupSchedulePage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         response.setCharacterEncoding("UTF-8");
         String path = "/Pages/groupSchedule.jsp";
-        String schedule = "";
-        try {
-            HTMLWriter writer = new HTMLWriter(new BSUIRSchedule(groupNumber));
-            request.setAttribute("chosenGroup", groupNumber);
-            schedule = writer.getScheduleInfo() + writer.getHTMLSchedule();
-        } catch (JSONException e) {
-            schedule = "JSON Error";
-        }
-        request.setAttribute("schedule", schedule);
         ServletContext context = getServletContext();
         RequestDispatcher dispatcher = context.getRequestDispatcher(path);
         dispatcher.forward(request, response);
@@ -60,5 +63,19 @@ public class GroupScheduleServlet extends HttpServlet {
                 .get()
                 .getValue();
     }
+
+    private void setScheduleAttr(HttpServletRequest request, String groupNumber) {
+        String schedule = "";
+        try {
+            HTMLWriter writer = new HTMLWriter(new BSUIRSchedule(groupNumber));
+            request.setAttribute("chosenGroup", groupNumber);
+            schedule = writer.getScheduleInfo() + writer.getHTMLSchedule();
+        } catch (JSONException e) {
+            schedule = "JSON Error";
+        }
+        request.setAttribute("schedule", schedule);
+    }
+
+
 
 }

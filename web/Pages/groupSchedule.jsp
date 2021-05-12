@@ -20,7 +20,7 @@
     <title>Schedule</title>
 </head>
 <body>
-
+${alert}
 <div id="page">
     <img src="CSS/Images/logo.png" width="50px" style="z-index: 50">
     <nav id="menu">

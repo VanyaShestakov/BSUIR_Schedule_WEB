@@ -7,9 +7,14 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 import org.json.JSONException;
 
+import javax.validation.ConstraintViolation;
+import javax.validation.Validation;
+import javax.validation.Validator;
+import javax.validation.ValidatorFactory;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
+import java.util.Set;
 
 @WebServlet(name = "ScheduleServlet", value = "/BSUIRSchedule")
 public class GroupScheduleServlet extends HttpServlet {
@@ -34,7 +39,7 @@ public class GroupScheduleServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String groupNumber = request.getParameter("groupNumber");
         DBConnector groupsTableConnector = new DBConnector();
-        if (groupsTableConnector.containsGroup(groupNumber.trim())) {
+        if (/*isCorrectGroupNumber(groupNumber) &&*/ groupsTableConnector.containsGroup(groupNumber.trim())) {
             response.addCookie(new Cookie("groupNumber", request.getParameter("groupNumber")));
             setScheduleAttr(request, groupNumber);
             forwardGroupSchedulePage(request, response);
@@ -76,6 +81,13 @@ public class GroupScheduleServlet extends HttpServlet {
         request.setAttribute("schedule", schedule);
     }
 
+    private boolean isCorrectGroupNumber (String groupNumber) {
+        ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
+        Validator validator = validatorFactory.getValidator();
+        Set<ConstraintViolation<BSUIRSchedule>> errors = validator.validateValue(BSUIRSchedule.class, "groupNumber", groupNumber);
+        validatorFactory.close();
+        return errors.size() == 0;
+    }
 
 
 }

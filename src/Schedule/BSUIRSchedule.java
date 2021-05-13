@@ -12,12 +12,14 @@ import java.util.ArrayList;
 
 public class BSUIRSchedule {
     private final ArrayList<ArrayList<BSUIRLesson>> scheduleList;
+
     private final int currentWeek;
 
     @NotEmpty
     @Pattern(regexp = "^\\d+$")
     @Size(min = 6, max = 6)
     private final String groupNumber;
+
     private final String todayDate;
 
     public String getTodayDate() {

@@ -17,7 +17,7 @@ public class DBConnector {
     private static final String USER = "admin";
     private static final String PASSWORD = "admin";
 
-    private Statement statement;
+    //private Statement statement;
 
     public DBConnector() {
         try {

@@ -1,62 +1,89 @@
 package Databases;
 
-import Schedule.BSUIRTeacher;
+import Databases.Exceptions.ConnectionIsClosedException;
 import Tools.Pair;
 import com.mysql.cj.jdbc.Driver;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.*;
 
-public class MySQLQueryExecutor implements QueryExecutor {
+public class MySQLQueryExecutor {
     private static final String URL = "jdbc:mysql://localhost:3306/";
-    private final String dbName;
-    private final String user;
-    private final String password;
+    private final Connection connection;
 
-    public MySQLQueryExecutor(String dbName, String user, String password) {
-        try {
-            java.sql.Driver driver = new Driver();
-            DriverManager.registerDriver(driver);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        this.dbName = dbName;
-        this.user = user;
-        this.password = password;
+    /**
+     * Constructor registers driver and get connection from {@code DriverManager}
+     * @param dbName name of database without full URL to local server
+     * @param user
+     * @param password
+     * @throws SQLException
+     */
+    public MySQLQueryExecutor(String dbName, String user, String password) throws SQLException {
+        java.sql.Driver driver = new Driver();
+        DriverManager.registerDriver(driver);
+        this.connection = DriverManager.getConnection(URL + dbName, user, password);
     }
 
-    public void insert(String tableName, List<Pair<String, ?>> data) {
-        try (Connection connection = DriverManager.getConnection(URL + dbName, user, password)) {
-            Statement statement = connection.createStatement();
-            StringJoiner fieldNames = new StringJoiner(", ", "(" , ")");
-            StringJoiner values = new StringJoiner(", ", "(" , ")");
-            for (Pair<String, ?> pair: data) {
-                fieldNames.add(pair.getKey());
-                if (pair.getValue() instanceof Number) {
-                    values.add((pair.getValue()).toString());
-                } else if (pair.getValue() instanceof String) {
-                    values.add("'" + pair.getValue() + "'");
-                }
+    /**
+     * This method give an opportunity to execute SQL function: INSERT
+     *
+     * @param tableName string representation of the table name;
+     * @param data a list of field names and their corresponding inserted values ({@code List<Pair<String, ?>>});
+     * @throws SQLException
+     * @throws ConnectionIsClosedException if connection with database is closed method
+     * throws this Exception
+     */
+    public void insert(String tableName, List<Pair<String, ?>> data) throws SQLException, ConnectionIsClosedException {
+        if (connection.isClosed()) {
+            throw new ConnectionIsClosedException("Connection with database is closed");
+        }
+        Statement statement = connection.createStatement();
+        StringJoiner fieldNames = new StringJoiner(", ", "(", ")");
+        StringJoiner values = new StringJoiner(", ", "(", ")");
+        for (Pair<String, ?> pair : data) {
+            fieldNames.add(pair.getKey());
+            if (pair.getValue() instanceof Number) {
+                values.add((pair.getValue()).toString());
+            } else if (pair.getValue() instanceof String) {
+                values.add("'" + pair.getValue() + "'");
             }
-            statement.execute("INSERT INTO " + tableName + " " + fieldNames + "VALUES " + values);
-            System.out.println(fieldNames);
-            System.out.println(values);
-            //statement.executeBatch();
-        } catch (SQLException e) {
-            e.printStackTrace();
         }
+        statement.execute("INSERT INTO " + tableName + " " + fieldNames + " VALUES " + values);
+        statement.close();
     }
 
-    public static void main(String[] args) {
-        ArrayList<Pair<String, ?>> list = new ArrayList<>();
-        list.add(new Pair<>("id", 3));
-        list.add(new Pair<>("name", "Ivan"));
-        list.add(new Pair<>("dick_size", 3.5));
-        MySQLQueryExecutor executor = new MySQLQueryExecutor("teachers_db", "admin", "admin");
-        executor.insert("someTable", list);
+    /**
+     * This method give an opportunity to execute SQL function: TRUNCATE (TABLE)
+     * @param tableName string representation of the table name;
+     * @throws SQLException
+     * @throws ConnectionIsClosedException if connection with database is closed method
+     *      * throws this Exception
+     */
+    public void truncate(String tableName) throws SQLException, ConnectionIsClosedException {
+        if (connection.isClosed()) {
+            throw new ConnectionIsClosedException("Connection with database is closed");
+        }
+        Statement statement = connection.createStatement();
+        statement.execute("TRUNCATE TABLE " + tableName);
+        statement.close();
+    }
+
+    /**
+     * Method closes connection with database
+     * @throws SQLException
+     */
+    public void close() throws SQLException {
+        connection.close();
+    }
+
+    /**
+     * @return {@code Boolean} Information about connection: if it is closed - true
+     * @throws SQLException
+     */
+    public boolean isClosed() throws SQLException {
+        return connection.isClosed();
     }
 
 }

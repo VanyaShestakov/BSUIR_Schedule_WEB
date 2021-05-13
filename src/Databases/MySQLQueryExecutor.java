@@ -3,10 +3,8 @@ package Databases;
 import Databases.Exceptions.ConnectionIsClosedException;
 import Tools.Pair;
 import com.mysql.cj.jdbc.Driver;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+
+import java.sql.*;
 import java.util.*;
 
 public class MySQLQueryExecutor {
@@ -52,6 +50,23 @@ public class MySQLQueryExecutor {
         }
         statement.execute("INSERT INTO " + tableName + " " + fieldNames + " VALUES " + values);
         statement.close();
+    }
+
+    /**
+     * This method give an opportunity to execute SQL function: SELECT *
+     * @param tableName string representation of the table name;
+     * @return {@code ResultSet}
+     * @throws SQLException
+     * @throws ConnectionIsClosedException
+     */
+    public ResultSet select(String tableName) throws SQLException, ConnectionIsClosedException {
+        if (connection.isClosed()) {
+            throw new ConnectionIsClosedException("Connection with database is closed");
+        }
+        Statement statement = connection.createStatement();
+        ResultSet returnedSet = statement.executeQuery("SELECT * FROM " + tableName);
+        statement.close();
+        return returnedSet;
     }
 
     /**
